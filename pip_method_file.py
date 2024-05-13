@@ -77,7 +77,7 @@ for k in range(2 ** D - 1):
 
 if estimator=='IPW':
     a_start[0][11]=1
-    b_start[0]=20
+    b_start[0]=22
 elif estimator=='DR':
     a_start[0][10]=1
     b_start[0]=58
