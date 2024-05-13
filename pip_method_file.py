@@ -63,8 +63,8 @@ if estimator=='IPW':
 elif estimator=='DR':
     propensity_model=pd.read_csv('propensity_score.csv',header=None).values
     treatment_mean=pd.read_csv('calculate_mean.csv',header=None).values
-    #propensity_model=pd.read_csv('propensity_score.csv',header=None).iloc[0:429,:].values
-    #treatment_mean=pd.read_csv('calculate_mean.csv',header=None).iloc[0:429,:].values
+    # propensity_model=pd.read_csv('propensity_score.csv',header=None).iloc[0:429,:].values
+    # treatment_mean=pd.read_csv('calculate_mean.csv',header=None).iloc[0:429,:].values
     
 # 0.Initialization a,b
 for k in range(2 ** D - 1):

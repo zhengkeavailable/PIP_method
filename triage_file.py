@@ -163,7 +163,7 @@ def build_decision_tree_model(model, x, Trt, Trt_is, y, propensity_model, treatm
     for j in range(3):
         penalty[j] = model.addVar(lb=0, vtype=GRB.CONTINUOUS, name="penalty" + str(j))
         model.addConstr(penalty[j] >= gp.quicksum(M[t][j] for t in range(2 ** D)) - gamma[j] * N)
-        obj = obj - 10 * penalty[j]
+        obj = obj - 1000 * penalty[j]
         # obj = obj - 1000*penalty[j]
 
     model.setObjective(obj, GRB.MAXIMIZE)
