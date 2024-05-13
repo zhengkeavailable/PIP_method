@@ -14,7 +14,7 @@ from rpy2.robjects import r
 
 def build_decision_tree_model(model, x, Trt, Trt_is, y, propensity_model, treatment_mean, a_start, b_start, z_start,
                               constraint_value, D, N, B_lb, M_ub, epsilon, epsilon_1, epsilon_2, p, num_j, iterations,
-                              base_rate, enlargement_rate, shrinkage_rate, pip_max_rate, estimator):
+                              base_rate, enlargement_rate, shrinkage_rate, pip_max_rate, estimator, mode):
     model = model.copy()
     a = {}
     a_abs = {}
@@ -180,8 +180,9 @@ def build_decision_tree_model(model, x, Trt, Trt_is, y, propensity_model, treatm
     # model.setParam('Heuristics', 0)
     all_vars = model.getVars()
     integer_var_count = sum(1 for var in all_vars if var.vType == gp.GRB.BINARY)
-    if estimator == 'DR' and iterations == 0:
-        model.setParam("Timelimit", 60)
+    # if estimator == 'DR' and iterations == 0:
+    if mode == "MIP" and iterations == 0:
+        model.setParam("Timelimit", 3600)
     else:
         model.setParam("Timelimit", 60)
     model.setParam('LogFile', 'output/solver_log' + str(iterations) + '.txt')
@@ -304,7 +305,7 @@ def build_decision_tree_model(model, x, Trt, Trt_is, y, propensity_model, treatm
                     print('Large epsilon!', sum(a[k][i].X * x[s][i] for i in range(p)) - b[k].X,
                           -(sum(a[k][i].X * x[s][i] for i in range(p))) + b[k].X - epsilon, file=f)
                     k = 2 ** D - 1
-        if estimator == 'DR' and iterations == 51:
+        if mode=="MIP" and iterations == 0:
             en_e1, en_e2, en_e1_lb, en_e2_lb, sh_e1, sh_e2, sh_e1_ub, sh_e2_ub = 0, 0, 0, 0, 0, 0, 0, 0
         else:
             en_e1 = np.percentile(value_positive, min(enlargement_rate * base_rate, pip_max_rate))
