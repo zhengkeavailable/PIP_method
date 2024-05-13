@@ -143,8 +143,8 @@ def build_decision_tree_model(model, x, Trt, Trt_is, y, propensity_model, treatm
             elif s in J0_set[t]:
                 J0_s.append(t)
                 constraint_true=1
-        if constraint_true==1:
-            model.addConstr(gp.quicksum(z[s][t] for t in J0_s) == 1)
+        if constraint_true == 1:
+            model.addConstr(gp.quicksum(z[s][t] for t in J0_s) + fixed_sum == 1)
 
     # ||a_k||_1 <= u_k
     for k in range(2 ** D - 1):
