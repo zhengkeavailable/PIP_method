@@ -1,0 +1,46 @@
+
+Gurobi 11.0.1 (win64) logging started Mon May 13 15:36:28 2024
+
+Set parameter LogFile to value "output/solver_log3.txt"
+Gurobi Optimizer version 11.0.1 build v11.0.1rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 2394 rows, 504 columns and 44347 nonzeros
+Model fingerprint: 0xa4dd4bef
+Variable types: 248 continuous, 256 integer (256 binary)
+Coefficient statistics:
+  Matrix range     [4e-01, 1e+05]
+  Objective range  [1e+00, 1e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e-02, 1e+05]
+
+User MIP start produced solution with objective 74219.9 (0.01s)
+User MIP start produced solution with objective 74219.9 (0.01s)
+Loaded user MIP start with objective 74219.9
+
+Presolve removed 161 rows and 142 columns
+Presolve time: 0.05s
+Presolved: 2233 rows, 362 columns, 42798 nonzeros
+Variable types: 228 continuous, 134 integer (131 binary)
+
+Root relaxation: objective 7.500084e+04, 483 iterations, 0.03 seconds (0.06 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 75000.8445    0    4 74219.9265 75000.8445  1.05%     -    0s
+     0     0 75000.8443    0    4 74219.9265 75000.8443  1.05%     -    0s
+     0     2 75000.8443    0    4 74219.9265 75000.8443  1.05%     -    0s
+H   31    22                    74377.496754 75000.8442  0.84%  14.9    0s
+* 1439   112              42    74486.739980 75000.8442  0.69%   1.6    0s
+* 9055   262              22    74944.274705 75000.8442  0.08%   0.9    1s
+
+Explored 9318 nodes (11639 simplex iterations) in 1.75 seconds (2.58 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 5: 74944.3 74944.3 74486.7 ... 74219.9
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 7.494427470517e+04, best bound 7.494427470517e+04, gap 0.0000%

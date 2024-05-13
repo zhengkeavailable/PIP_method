@@ -1,0 +1,48 @@
+
+Gurobi 11.0.1 (win64) logging started Mon May 13 15:50:23 2024
+
+Set parameter LogFile to value "output/solver_log48.txt"
+Gurobi Optimizer version 11.0.1 build v11.0.1rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 2298 rows, 479 columns and 42675 nonzeros
+Model fingerprint: 0xb09f267b
+Variable types: 248 continuous, 231 integer (231 binary)
+Coefficient statistics:
+  Matrix range     [4e-01, 1e+05]
+  Objective range  [1e+00, 1e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e-02, 1e+05]
+
+User MIP start produced solution with objective 79065 (0.00s)
+User MIP start produced solution with objective 79065 (0.01s)
+Loaded user MIP start with objective 79065
+
+Presolve removed 124 rows and 124 columns
+Presolve time: 0.06s
+Presolved: 2174 rows, 355 columns, 41713 nonzeros
+Variable types: 229 continuous, 126 integer (123 binary)
+
+Root relaxation: objective 7.929040e+04, 530 iterations, 0.04 seconds (0.06 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 79290.3952    0    1 79065.0191 79290.3952  0.29%     -    0s
+     0     0 79290.3952    0    1 79065.0191 79290.3952  0.29%     -    0s
+     0     0 79290.3952    0    3 79065.0191 79290.3952  0.29%     -    0s
+     0     0 79290.3952    0    3 79065.0191 79290.3952  0.29%     -    0s
+     0     0 79290.3952    0    3 79065.0191 79290.3952  0.29%     -    0s
+     0     2 79290.3952    0    3 79065.0191 79290.3952  0.29%     -    0s
+*   62    23              15    79067.178265 79290.3942  0.28%  10.5    0s
+H  267    57                    79236.164999 79290.3939  0.07%  12.6    1s
+
+Explored 310 nodes (4926 simplex iterations) in 1.26 seconds (1.53 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 4: 79236.2 79236.2 79067.2 79065 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 7.923616499874e+04, best bound 7.923616499874e+04, gap 0.0000%

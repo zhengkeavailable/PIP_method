@@ -1,0 +1,46 @@
+
+Gurobi 11.0.1 (win64) logging started Mon May 13 15:45:32 2024
+
+Set parameter LogFile to value "output/solver_log36.txt"
+Gurobi Optimizer version 11.0.1 build v11.0.1rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 2374 rows, 507 columns and 44127 nonzeros
+Model fingerprint: 0xe3f27cdd
+Variable types: 248 continuous, 259 integer (259 binary)
+Coefficient statistics:
+  Matrix range     [4e-01, 1e+05]
+  Objective range  [1e+00, 1e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e-02, 1e+05]
+
+User MIP start produced solution with objective 77938 (0.00s)
+User MIP start produced solution with objective 77938 (0.01s)
+Loaded user MIP start with objective 77938
+
+Presolve removed 148 rows and 137 columns
+Presolve time: 0.05s
+Presolved: 2226 rows, 370 columns, 42821 nonzeros
+Variable types: 228 continuous, 142 integer (139 binary)
+
+Root relaxation: objective 7.806063e+04, 653 iterations, 0.04 seconds (0.09 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 78060.6326    0    3 77937.9551 78060.6326  0.16%     -    0s
+H    0     0                    77996.549347 78060.6326  0.08%     -    0s
+     0     0 78060.6326    0    3 77996.5493 78060.6326  0.08%     -    0s
+     0     0 78060.6326    0    5 77996.5493 78060.6326  0.08%     -    0s
+H    0     0                    78060.632590 78060.6326  0.00%     -    0s
+     0     0 78060.6326    0    5 78060.6326 78060.6326  0.00%     -    0s
+
+Explored 1 nodes (1363 simplex iterations) in 0.50 seconds (0.64 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 4: 78060.6 78060.6 77996.5 77938 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 7.806063259032e+04, best bound 7.806063259032e+04, gap 0.0000%
