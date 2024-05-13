@@ -213,69 +213,71 @@ execution_time = end_time - start_time
 with open('output/time.txt', 'a') as f2:
     print("Total time of pip method after iteration " + str(iterations), execution_time, "s", file=f2)
 
-# base_rate = 15
-# pip_max_rate = 40
-f_new = 0
-base_rate = enlargement_rate * base_rate
-epsilon_1 = np.percentile(value_positive, base_rate)
-epsilon_2 = -np.percentile(value_negative, 100 - base_rate)
-value = [f_old]
-shrinkage = [0]
-e1_list = [en_e1]
-e2_list = [en_e2]
-e1_b_list = [en_e1_lb]
-e2_b_list = [en_e2_lb]
+if mode == "PIP":
+    f_new = 0
+    base_rate = enlargement_rate * base_rate
+    epsilon_1 = np.percentile(value_positive, base_rate)
+    epsilon_2 = -np.percentile(value_negative, 100 - base_rate)
+    value = [f_old]
+    shrinkage = [0]
+    e1_list = [en_e1]
+    e2_list = [en_e2]
+    e1_b_list = [en_e1_lb]
+    e2_b_list = [en_e2_lb]
 
-while iterations_unchange < 10 and iterations < 50 and min(epsilon_1, epsilon_2) > 1e-6 and max_rate_reach <= 1:
-    iterations += 1
-    # 1. Determine index sets # In function
-    # 2. Solve the MIP
-    f_new, a_start, b_start, z_start, constraint_value, value_negative, value_positive, en_e1, en_e2, en_e1_lb, en_e2_lb, sh_e1, sh_e2, sh_e1_ub, sh_e2_ub = triage_file.build_decision_tree_model(
-        model, x, Trt, Trt_is, y, propensity_model, treatment_mean, a_start, b_start, z_start, constraint_value, D, N,
-        B_lb, M_ub, epsilon, epsilon_1, epsilon_2, p, num_j, iterations, base_rate, enlargement_rate, shrinkage_rate,
-        pip_max_rate, estimator, mode)
-    # 3. Enlargement
-    if f_new - f_old <= 1:
-        iterations_unchange = iterations_unchange + 1
-        with open('output/output_iter=' + str(iterations) + '.txt', 'a') as f:
-            print("Enlargement!", file=f)
-        if enlargement_rate * base_rate < pip_max_rate:
-            base_rate = enlargement_rate * base_rate
+    while iterations_unchange < 10 and iterations < 50 and min(epsilon_1, epsilon_2) > 1e-6 and max_rate_reach <= 1:
+        iterations += 1
+        # 1. Determine index sets # In function
+        # 2. Solve the MIP
+        f_new, a_start, b_start, z_start, constraint_value, value_negative, value_positive, en_e1, en_e2, en_e1_lb, en_e2_lb, sh_e1, sh_e2, sh_e1_ub, sh_e2_ub = triage_file.build_decision_tree_model(
+            model, x, Trt, Trt_is, y, propensity_model, treatment_mean, a_start, b_start, z_start, constraint_value, D,
+            N,
+            B_lb, M_ub, epsilon, epsilon_1, epsilon_2, p, num_j, iterations, base_rate, enlargement_rate,
+            shrinkage_rate,
+            pip_max_rate, estimator, mode)
+        # 3. Enlargement
+        if f_new - f_old <= 1:
+            iterations_unchange = iterations_unchange + 1
+            with open('output/output_iter=' + str(iterations) + '.txt', 'a') as f:
+                print("Enlargement!", file=f)
+            if enlargement_rate * base_rate < pip_max_rate:
+                base_rate = enlargement_rate * base_rate
+            else:
+                base_rate = pip_max_rate
+                max_rate_reach += 1
+            epsilon_1 = np.percentile(value_positive, base_rate)
+            epsilon_2 = -np.percentile(value_negative, 100 - base_rate)
+            shrinkage.append(0)
+            e1_list.append(en_e1)
+            e2_list.append(en_e2)
+            e1_b_list.append(en_e1_lb)
+            e2_b_list.append(en_e2_lb)
+
+        # 4. Shrinkage
         else:
-            base_rate = pip_max_rate
-            max_rate_reach += 1
-        epsilon_1 = np.percentile(value_positive, base_rate)
-        epsilon_2 = -np.percentile(value_negative, 100 - base_rate)
-        shrinkage.append(0)
-        e1_list.append(en_e1)
-        e2_list.append(en_e2)
-        e1_b_list.append(en_e1_lb)
-        e2_b_list.append(en_e2_lb)
+            iterations_unchange = 0
+            with open('output/output_iter=' + str(iterations) + '.txt', 'a') as f:
+                print("Shrinkage!", file=f)
+            base_rate = shrinkage_rate * base_rate
+            epsilon_1 = np.percentile(value_positive, base_rate)
+            epsilon_2 = -np.percentile(value_negative, 100 - base_rate)
+            shrinkage.append(1)
+            e1_list.append(sh_e1)
+            e2_list.append(sh_e2)
+            e1_b_list.append(sh_e1_ub)
+            e2_b_list.append(sh_e2_ub)
+        f_old = f_new
+        value.append(f_old)
+        end_time = time.time()
+        execution_time = end_time - start_time
+        with open('output/time.txt', 'a') as f2:
+            print("Total time of pip method after iteration " + str(iterations), execution_time, "s", file=f2)
 
-    # 4. Shrinkage
-    else:
-        iterations_unchange = 0
-        with open('output/output_iter=' + str(iterations) + '.txt', 'a') as f:
-            print("Shrinkage!", file=f)
-        base_rate = shrinkage_rate * base_rate
-        epsilon_1 = np.percentile(value_positive, base_rate)
-        epsilon_2 = -np.percentile(value_negative, 100 - base_rate)
-        shrinkage.append(1)
-        e1_list.append(sh_e1)
-        e2_list.append(sh_e2)
-        e1_b_list.append(sh_e1_ub)
-        e2_b_list.append(sh_e2_ub)
-    f_old = f_new
-    value.append(f_old)
-    end_time = time.time()
-    execution_time = end_time - start_time
-    with open('output/time.txt', 'a') as f2:
-        print("Total time of pip method after iteration " + str(iterations), execution_time, "s", file=f2)
-
-# 5. Terminate
-with open('output/obj_value.csv', mode='w', newline='') as file:
-    writer = csv.writer(file)
-    writer.writerow(
-        ['Iterations', 'Value', 'Shrinkage', 'Epsilon_1_next', 'Epsilon_2_next', 'Epsilon_1_bound', 'Epsilon_2_bound'])
-    for i in range(iterations + 1):
-        writer.writerow([i, value[i], shrinkage[i], e1_list[i], e2_list[i], e1_b_list[i], e2_b_list[i]])
+    # 5. Terminate
+    with open('output/obj_value.csv', mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(
+            ['Iterations', 'Value', 'Shrinkage', 'Epsilon_1_next', 'Epsilon_2_next', 'Epsilon_1_bound',
+             'Epsilon_2_bound'])
+        for i in range(iterations + 1):
+            writer.writerow([i, value[i], shrinkage[i], e1_list[i], e2_list[i], e1_b_list[i], e2_b_list[i]])
