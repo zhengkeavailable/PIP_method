@@ -55,7 +55,7 @@ for s in range(N):
 
 # Calculate propensity score
 # estimator='IPW'
-estimator = 'IPW'
+estimator = 'DR'
 if estimator == 'IPW':
     propensity_model = cps.train_propensity_model(x, Trt)
     treatment_mean = None
