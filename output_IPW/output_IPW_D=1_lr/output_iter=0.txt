@@ -1,5 +1,5 @@
-epsilon_1,epsilon_2: 4.0 2.01
-Obj: 54861.50383211246
+epsilon_1,epsilon_2: 2.0600000000000023 2.01
+Obj: 54861.503832112445
 optimal_a: {0: [0.0003265393470304166, -0.0015380442951863952, 0.0038352748931485595, 0.008181800582694687, 0.025826810131728217, 0.004681521343424951, -0.008995622184021865, -0.007632877926772715, 0.00030614400623711163, -0.10512022526788435, 0.0006558749973513395, 0.04179758849376601, 0.14729467508723212, -0.0011319742993445724, 0.0031667414914867834, 0.00496980845310524, -0.015384237383127096, 0.0031126051328220924, -0.007092955647557996, 0.01458937761182543, -0.004237789402066927, -0.012783013635091545, 0.0, 0.0, 0.006357630127176661, 0.0, -0.0746345842046815, 0.0, 0.0, 0.0, 0.0, -0.035734434327198916, -0.3414945790329048, 0.0012050266018925893, 0.0, -0.10823010702082714, 0.0]}
 optimal_b: {0: 0.4092910634618132}
 optimal_c: {0: [0.0, 0.0, 0.0, 1.0], 1: [0.0, 0.0, 1.0, 0.0]}
@@ -131,7 +131,7 @@ Sample 11 in 1 leaf nodes
 Sample 11 pass node 0 RIGHT
 J1_z_12,0= 1
 Constraint_value_12,0 0.17478241694199503
-If enlargement,12,0 in J0_set
+If enlargement,12,0 in J1_set
 If shrinkage,12,0 in J1_set
 J2_z_12,1= 0
 Constraint_value_12,1 -0.18478241694199504
@@ -169,8 +169,7 @@ If enlargement,15,1 in J1_set
 If shrinkage,15,1 in J1_set
 Sample 15 in 1 leaf nodes
 Sample 15 pass node 0 RIGHT
-J0_z_16,0= 1.0
-z_start16,0= 1
+J1_z_16,0= 1
 Constraint_value_16,0 0.21704682728730781
 If enlargement,16,0 in J1_set
 If shrinkage,16,0 in J1_set
@@ -178,7 +177,7 @@ J2_z_16,1= 0
 Constraint_value_16,1 -0.22704682728730782
 If enlargement,16,1 in J2_set
 If shrinkage,16,1 in J2_set
-Sample 16 in 1.0 leaf nodes
+Sample 16 in 1 leaf nodes
 Sample 16 pass node 0 LEFT
 J1_z_17,0= 1
 Constraint_value_17,0 0.19214989492956552
@@ -210,8 +209,7 @@ If enlargement,19,1 in J2_set
 If shrinkage,19,1 in J2_set
 Sample 19 in 1 leaf nodes
 Sample 19 pass node 0 LEFT
-J0_z_20,0= 1.0
-z_start20,0= 1
+J1_z_20,0= 1
 Constraint_value_20,0 0.33209745026442355
 If enlargement,20,0 in J1_set
 If shrinkage,20,0 in J1_set
@@ -219,7 +217,7 @@ J2_z_20,1= 0
 Constraint_value_20,1 -0.34209745026442356
 If enlargement,20,1 in J2_set
 If shrinkage,20,1 in J2_set
-Sample 20 in 1.0 leaf nodes
+Sample 20 in 1 leaf nodes
 Sample 20 pass node 0 LEFT
 J1_z_21,0= 1
 Constraint_value_21,0 0.8295397261554144
@@ -240,7 +238,7 @@ J0_z_22,1= 0.0
 z_start22,1= 0
 Constraint_value_22,1 -0.05394957939452238
 If enlargement,22,1 in J0_set
-If shrinkage,22,1 in J0_set
+If shrinkage,22,1 in J2_set
 Sample 22 in 1.0 leaf nodes
 Sample 22 pass node 0 LEFT
 J2_z_23,0= 0
@@ -283,7 +281,7 @@ If shrinkage,26,0 in J1_set
 J0_z_26,1= 0.0
 z_start26,1= 0
 Constraint_value_26,1 -0.14861927591042468
-If enlargement,26,1 in J0_set
+If enlargement,26,1 in J2_set
 If shrinkage,26,1 in J2_set
 Sample 26 in 1.0 leaf nodes
 Sample 26 pass node 0 LEFT
@@ -337,8 +335,7 @@ If enlargement,31,1 in J2_set
 If shrinkage,31,1 in J2_set
 Sample 31 in 1 leaf nodes
 Sample 31 pass node 0 LEFT
-J0_z_32,0= 1.0
-z_start32,0= 1
+J1_z_32,0= 1
 Constraint_value_32,0 0.2424188714128554
 If enlargement,32,0 in J1_set
 If shrinkage,32,0 in J1_set
@@ -346,7 +343,7 @@ J2_z_32,1= 0
 Constraint_value_32,1 -0.2524188714128554
 If enlargement,32,1 in J2_set
 If shrinkage,32,1 in J2_set
-Sample 32 in 1.0 leaf nodes
+Sample 32 in 1 leaf nodes
 Sample 32 pass node 0 LEFT
 J1_z_33,0= 1
 Constraint_value_33,0 0.6484333745847795
@@ -426,7 +423,7 @@ If enlargement,40,0 in J2_set
 If shrinkage,40,0 in J2_set
 J1_z_40,1= 1
 Constraint_value_40,1 0.14847886795044352
-If enlargement,40,1 in J0_set
+If enlargement,40,1 in J1_set
 If shrinkage,40,1 in J1_set
 Sample 40 in 1 leaf nodes
 Sample 40 pass node 0 RIGHT
@@ -472,8 +469,7 @@ If enlargement,44,1 in J2_set
 If shrinkage,44,1 in J2_set
 Sample 44 in 1 leaf nodes
 Sample 44 pass node 0 LEFT
-J0_z_45,0= 1.0
-z_start45,0= 1
+J1_z_45,0= 1
 Constraint_value_45,0 0.20753968348230073
 If enlargement,45,0 in J1_set
 If shrinkage,45,0 in J1_set
@@ -481,7 +477,7 @@ J2_z_45,1= 0
 Constraint_value_45,1 -0.21753968348230074
 If enlargement,45,1 in J2_set
 If shrinkage,45,1 in J2_set
-Sample 45 in 1.0 leaf nodes
+Sample 45 in 1 leaf nodes
 Sample 45 pass node 0 LEFT
 J1_z_46,0= 1
 Constraint_value_46,0 0.5278478777498978
@@ -553,7 +549,7 @@ If shrinkage,52,0 in J1_set
 J0_z_52,1= 0.0
 z_start52,1= 0
 Constraint_value_52,1 -0.1462537689672631
-If enlargement,52,1 in J0_set
+If enlargement,52,1 in J2_set
 If shrinkage,52,1 in J2_set
 Sample 52 in 1.0 leaf nodes
 Sample 52 pass node 0 LEFT
@@ -579,7 +575,7 @@ Sample 54 in 1 leaf nodes
 Sample 54 pass node 0 LEFT
 J1_z_55,0= 1
 Constraint_value_55,0 0.15556486743177905
-If enlargement,55,0 in J0_set
+If enlargement,55,0 in J1_set
 If shrinkage,55,0 in J1_set
 J2_z_55,1= 0
 Constraint_value_55,1 -0.16556486743177906
@@ -731,8 +727,7 @@ If enlargement,69,1 in J2_set
 If shrinkage,69,1 in J2_set
 Sample 69 in 1 leaf nodes
 Sample 69 pass node 0 LEFT
-J0_z_70,0= 1.0
-z_start70,0= 1
+J1_z_70,0= 1
 Constraint_value_70,0 0.2457382276075576
 If enlargement,70,0 in J1_set
 If shrinkage,70,0 in J1_set
@@ -740,7 +735,7 @@ J2_z_70,1= 0
 Constraint_value_70,1 -0.2557382276075576
 If enlargement,70,1 in J2_set
 If shrinkage,70,1 in J2_set
-Sample 70 in 1.0 leaf nodes
+Sample 70 in 1 leaf nodes
 Sample 70 pass node 0 LEFT
 J1_z_71,0= 1
 Constraint_value_71,0 0.1990835403795726
@@ -968,13 +963,13 @@ If shrinkage,92,0 in J1_set
 J0_z_92,1= 0.0
 z_start92,1= 0
 Constraint_value_92,1 -0.15729401384290853
-If enlargement,92,1 in J0_set
+If enlargement,92,1 in J2_set
 If shrinkage,92,1 in J2_set
 Sample 92 in 1.0 leaf nodes
 Sample 92 pass node 0 LEFT
 J1_z_93,0= 1
 Constraint_value_93,0 0.17382544393615051
-If enlargement,93,0 in J0_set
+If enlargement,93,0 in J1_set
 If shrinkage,93,0 in J1_set
 J2_z_93,1= 0
 Constraint_value_93,1 -0.18382544393615052
@@ -1093,11 +1088,10 @@ J0_z_104,1= 0.0
 z_start104,1= 0
 Constraint_value_104,1 -0.05614626971844743
 If enlargement,104,1 in J0_set
-If shrinkage,104,1 in J0_set
+If shrinkage,104,1 in J2_set
 Sample 104 in 1.0 leaf nodes
 Sample 104 pass node 0 LEFT
-J0_z_105,0= 1.0
-z_start105,0= 1
+J1_z_105,0= 1
 Constraint_value_105,0 0.0766131007963522
 If enlargement,105,0 in J0_set
 If shrinkage,105,0 in J1_set
@@ -1105,7 +1099,7 @@ J2_z_105,1= 0
 Constraint_value_105,1 -0.08661310079635219
 If enlargement,105,1 in J0_set
 If shrinkage,105,1 in J2_set
-Sample 105 in 1.0 leaf nodes
+Sample 105 in 1 leaf nodes
 Sample 105 pass node 0 LEFT
 J1_z_106,0= 1
 Constraint_value_106,0 0.278408978968842
@@ -1142,7 +1136,7 @@ Sample 108 pass node 0 LEFT
 J0_z_109,0= 1.0
 z_start109,0= 1
 Constraint_value_109,0 0.16050934402471892
-If enlargement,109,0 in J0_set
+If enlargement,109,0 in J1_set
 If shrinkage,109,0 in J1_set
 J0_z_109,1= 0.0
 z_start109,1= 0
@@ -1273,8 +1267,7 @@ If enlargement,121,1 in J2_set
 If shrinkage,121,1 in J2_set
 Sample 121 in 1 leaf nodes
 Sample 121 pass node 0 LEFT
-J0_z_122,0= 1.0
-z_start122,0= 1
+J1_z_122,0= 1
 Constraint_value_122,0 0.20398011144701744
 If enlargement,122,0 in J1_set
 If shrinkage,122,0 in J1_set
@@ -1282,7 +1275,7 @@ J2_z_122,1= 0
 Constraint_value_122,1 -0.21398011144701745
 If enlargement,122,1 in J2_set
 If shrinkage,122,1 in J2_set
-Sample 122 in 1.0 leaf nodes
+Sample 122 in 1 leaf nodes
 Sample 122 pass node 0 LEFT
 J1_z_123,0= 1
 Constraint_value_123,0 0.3740115073438197
@@ -1314,8 +1307,7 @@ If enlargement,125,1 in J1_set
 If shrinkage,125,1 in J1_set
 Sample 125 in 1 leaf nodes
 Sample 125 pass node 0 RIGHT
-J0_z_126,0= 1.0
-z_start126,0= 1
+J1_z_126,0= 1
 Constraint_value_126,0 0.20759755052258544
 If enlargement,126,0 in J1_set
 If shrinkage,126,0 in J1_set
@@ -1323,7 +1315,7 @@ J2_z_126,1= 0
 Constraint_value_126,1 -0.21759755052258545
 If enlargement,126,1 in J2_set
 If shrinkage,126,1 in J2_set
-Sample 126 in 1.0 leaf nodes
+Sample 126 in 1 leaf nodes
 Sample 126 pass node 0 LEFT
 J2_z_127,0= 0
 Constraint_value_127,0 -0.25026529647849305
@@ -1389,7 +1381,7 @@ Sample 132 in 1.0 leaf nodes
 Sample 132 pass node 0 LEFT
 J1_z_133,0= 1
 Constraint_value_133,0 0.17387083637587208
-If enlargement,133,0 in J0_set
+If enlargement,133,0 in J1_set
 If shrinkage,133,0 in J1_set
 J2_z_133,1= 0
 Constraint_value_133,1 -0.1838708363758721
@@ -1465,7 +1457,7 @@ Sample 139 in 1 leaf nodes
 Sample 139 pass node 0 LEFT
 J1_z_140,0= 1
 Constraint_value_140,0 0.1744515406424007
-If enlargement,140,0 in J0_set
+If enlargement,140,0 in J1_set
 If shrinkage,140,0 in J1_set
 J2_z_140,1= 0
 Constraint_value_140,1 -0.1844515406424007
@@ -1503,16 +1495,15 @@ If enlargement,143,1 in J1_set
 If shrinkage,143,1 in J1_set
 Sample 143 in 1 leaf nodes
 Sample 143 pass node 0 RIGHT
-J0_z_144,0= 1.0
-z_start144,0= 1
+J1_z_144,0= 1
 Constraint_value_144,0 0.07433248595242281
 If enlargement,144,0 in J0_set
-If shrinkage,144,0 in J0_set
+If shrinkage,144,0 in J1_set
 J2_z_144,1= 0
 Constraint_value_144,1 -0.0843324859524228
 If enlargement,144,1 in J0_set
 If shrinkage,144,1 in J2_set
-Sample 144 in 1.0 leaf nodes
+Sample 144 in 1 leaf nodes
 Sample 144 pass node 0 LEFT
 J0_z_145,0= 0.0
 z_start145,0= 1
@@ -1804,7 +1795,7 @@ If shrinkage,172,0 in J1_set
 J0_z_172,1= 0.0
 z_start172,1= 0
 Constraint_value_172,1 -0.14869015790940698
-If enlargement,172,1 in J0_set
+If enlargement,172,1 in J2_set
 If shrinkage,172,1 in J2_set
 Sample 172 in 1.0 leaf nodes
 Sample 172 pass node 0 LEFT
@@ -1890,8 +1881,7 @@ If enlargement,180,1 in J2_set
 If shrinkage,180,1 in J2_set
 Sample 180 in 1 leaf nodes
 Sample 180 pass node 0 LEFT
-J0_z_181,0= 1.0
-z_start181,0= 1
+J1_z_181,0= 1
 Constraint_value_181,0 0.3498332853763977
 If enlargement,181,0 in J1_set
 If shrinkage,181,0 in J1_set
@@ -1899,7 +1889,7 @@ J2_z_181,1= 0
 Constraint_value_181,1 -0.3598332853763977
 If enlargement,181,1 in J2_set
 If shrinkage,181,1 in J2_set
-Sample 181 in 1.0 leaf nodes
+Sample 181 in 1 leaf nodes
 Sample 181 pass node 0 LEFT
 J1_z_182,0= 1
 Constraint_value_182,0 0.5644764046807922
@@ -1957,7 +1947,7 @@ If enlargement,187,0 in J0_set
 If shrinkage,187,0 in J1_set
 J2_z_187,1= 0
 Constraint_value_187,1 -0.15596568535046323
-If enlargement,187,1 in J0_set
+If enlargement,187,1 in J2_set
 If shrinkage,187,1 in J2_set
 Sample 187 in 1 leaf nodes
 Sample 187 pass node 0 LEFT
@@ -1999,7 +1989,7 @@ If shrinkage,191,0 in J1_set
 J0_z_191,1= 0.0
 z_start191,1= 0
 Constraint_value_191,1 -0.13626773520870028
-If enlargement,191,1 in J0_set
+If enlargement,191,1 in J2_set
 If shrinkage,191,1 in J2_set
 Sample 191 in 1.0 leaf nodes
 Sample 191 pass node 0 LEFT
@@ -2028,7 +2018,7 @@ Sample 193 pass node 0 RIGHT
 J2_z_194,0= 0
 Constraint_value_194,0 -0.05128730189658448
 If enlargement,194,0 in J0_set
-If shrinkage,194,0 in J0_set
+If shrinkage,194,0 in J2_set
 J1_z_194,1= 1
 Constraint_value_194,1 0.04128730189658448
 If enlargement,194,1 in J0_set
@@ -2087,8 +2077,7 @@ If enlargement,199,1 in J1_set
 If shrinkage,199,1 in J1_set
 Sample 199 in 1 leaf nodes
 Sample 199 pass node 0 RIGHT
-J0_z_200,0= 1.0
-z_start200,0= 1
+J1_z_200,0= 1
 Constraint_value_200,0 0.1864514939159574
 If enlargement,200,0 in J1_set
 If shrinkage,200,0 in J1_set
@@ -2096,7 +2085,7 @@ J2_z_200,1= 0
 Constraint_value_200,1 -0.1964514939159574
 If enlargement,200,1 in J2_set
 If shrinkage,200,1 in J2_set
-Sample 200 in 1.0 leaf nodes
+Sample 200 in 1 leaf nodes
 Sample 200 pass node 0 LEFT
 J1_z_201,0= 1
 Constraint_value_201,0 0.5076106935404103
@@ -2121,7 +2110,7 @@ Sample 202 pass node 0 RIGHT
 J0_z_203,0= 1.0
 z_start203,0= 0
 Constraint_value_203,0 0.15054789459661477
-If enlargement,203,0 in J0_set
+If enlargement,203,0 in J1_set
 If shrinkage,203,0 in J1_set
 J0_z_203,1= 0.0
 z_start203,1= 1
@@ -2297,7 +2286,7 @@ Sample 219 pass node 0 RIGHT
 J1_z_220,0= 1
 Constraint_value_220,0 0.06191485561291654
 If enlargement,220,0 in J0_set
-If shrinkage,220,0 in J0_set
+If shrinkage,220,0 in J1_set
 J2_z_220,1= 0
 Constraint_value_220,1 -0.07191485561291654
 If enlargement,220,1 in J0_set
@@ -2348,7 +2337,7 @@ J0_z_225,0= 0.0
 z_start225,0= 1
 Constraint_value_225,0 -0.050169838600341854
 If enlargement,225,0 in J0_set
-If shrinkage,225,0 in J0_set
+If shrinkage,225,0 in J2_set
 J0_z_225,1= 1.0
 z_start225,1= 0
 Constraint_value_225,1 0.04016983860034185
@@ -2687,7 +2676,7 @@ Sample 257 pass node 0 RIGHT
 J0_z_258,0= 1.0
 z_start258,0= 1
 Constraint_value_258,0 0.15259867494964285
-If enlargement,258,0 in J0_set
+If enlargement,258,0 in J1_set
 If shrinkage,258,0 in J1_set
 J0_z_258,1= 0.0
 z_start258,1= 0
@@ -2728,16 +2717,15 @@ If enlargement,261,1 in J1_set
 If shrinkage,261,1 in J1_set
 Sample 261 in 1 leaf nodes
 Sample 261 pass node 0 RIGHT
-J0_z_262,0= 1.0
-z_start262,0= 1
+J1_z_262,0= 1
 Constraint_value_262,0 0.06524123935525733
 If enlargement,262,0 in J0_set
-If shrinkage,262,0 in J0_set
+If shrinkage,262,0 in J1_set
 J2_z_262,1= 0
 Constraint_value_262,1 -0.07524123935525732
 If enlargement,262,1 in J0_set
 If shrinkage,262,1 in J2_set
-Sample 262 in 1.0 leaf nodes
+Sample 262 in 1 leaf nodes
 Sample 262 pass node 0 LEFT
 J1_z_263,0= 1
 Constraint_value_263,0 0.5245031694975777
@@ -2799,8 +2787,7 @@ If enlargement,268,1 in J1_set
 If shrinkage,268,1 in J1_set
 Sample 268 in 1 leaf nodes
 Sample 268 pass node 0 RIGHT
-J0_z_269,0= 1.0
-z_start269,0= 1
+J1_z_269,0= 1
 Constraint_value_269,0 0.10094109470417456
 If enlargement,269,0 in J0_set
 If shrinkage,269,0 in J1_set
@@ -2808,7 +2795,7 @@ J2_z_269,1= 0
 Constraint_value_269,1 -0.11094109470417456
 If enlargement,269,1 in J0_set
 If shrinkage,269,1 in J2_set
-Sample 269 in 1.0 leaf nodes
+Sample 269 in 1 leaf nodes
 Sample 269 pass node 0 LEFT
 J0_z_270,0= 1.0
 z_start270,0= 1
@@ -2860,12 +2847,11 @@ If shrinkage,274,0 in J1_set
 J0_z_274,1= 0.0
 z_start274,1= 0
 Constraint_value_274,1 -0.141446637703607
-If enlargement,274,1 in J0_set
+If enlargement,274,1 in J2_set
 If shrinkage,274,1 in J2_set
 Sample 274 in 1.0 leaf nodes
 Sample 274 pass node 0 LEFT
-J0_z_275,0= 1.0
-z_start275,0= 1
+J1_z_275,0= 1
 Constraint_value_275,0 0.3297404834907765
 If enlargement,275,0 in J1_set
 If shrinkage,275,0 in J1_set
@@ -2873,13 +2859,13 @@ J2_z_275,1= 0
 Constraint_value_275,1 -0.3397404834907765
 If enlargement,275,1 in J2_set
 If shrinkage,275,1 in J2_set
-Sample 275 in 1.0 leaf nodes
+Sample 275 in 1 leaf nodes
 Sample 275 pass node 0 LEFT
 J0_z_276,0= 0.0
 z_start276,0= 1
 Constraint_value_276,0 -0.04813121908546347
 If enlargement,276,0 in J0_set
-If shrinkage,276,0 in J0_set
+If shrinkage,276,0 in J2_set
 J0_z_276,1= 1.0
 z_start276,1= 0
 Constraint_value_276,1 0.03813121908546347
@@ -2916,7 +2902,7 @@ J0_z_279,1= 0.0
 z_start279,1= 0
 Constraint_value_279,1 -0.04363158713476172
 If enlargement,279,1 in J0_set
-If shrinkage,279,1 in J0_set
+If shrinkage,279,1 in J2_set
 Sample 279 in 1.0 leaf nodes
 Sample 279 pass node 0 LEFT
 J1_z_280,0= 1
@@ -3130,11 +3116,10 @@ If shrinkage,300,0 in J0_set
 J2_z_300,1= 0
 Constraint_value_300,1 -0.04338061481189014
 If enlargement,300,1 in J0_set
-If shrinkage,300,1 in J0_set
+If shrinkage,300,1 in J2_set
 Sample 300 in 1 leaf nodes
 Sample 300 pass node 0 LEFT
-J0_z_301,0= 1.0
-z_start301,0= 1
+J1_z_301,0= 1
 Constraint_value_301,0 0.3081640592056209
 If enlargement,301,0 in J1_set
 If shrinkage,301,0 in J1_set
@@ -3142,7 +3127,7 @@ J2_z_301,1= 0
 Constraint_value_301,1 -0.3181640592056209
 If enlargement,301,1 in J2_set
 If shrinkage,301,1 in J2_set
-Sample 301 in 1.0 leaf nodes
+Sample 301 in 1 leaf nodes
 Sample 301 pass node 0 LEFT
 J1_z_302,0= 1
 Constraint_value_302,0 0.2825980756804265
@@ -3166,7 +3151,7 @@ Sample 303 in 1 leaf nodes
 Sample 303 pass node 0 LEFT
 J1_z_304,0= 1
 Constraint_value_304,0 0.1490817834907871
-If enlargement,304,0 in J0_set
+If enlargement,304,0 in J1_set
 If shrinkage,304,0 in J1_set
 J2_z_304,1= 0
 Constraint_value_304,1 -0.1590817834907871
@@ -3207,7 +3192,7 @@ Sample 307 pass node 0 LEFT
 J0_z_308,0= 0.0
 z_start308,0= 1
 Constraint_value_308,0 -0.15126239615513237
-If enlargement,308,0 in J0_set
+If enlargement,308,0 in J2_set
 If shrinkage,308,0 in J2_set
 J0_z_308,1= 1.0
 z_start308,1= 0
@@ -3293,7 +3278,7 @@ Sample 315 pass node 0 LEFT
 J0_z_316,0= 0.0
 z_start316,0= 1
 Constraint_value_316,0 -0.1556748389247532
-If enlargement,316,0 in J0_set
+If enlargement,316,0 in J2_set
 If shrinkage,316,0 in J2_set
 J0_z_316,1= 1.0
 z_start316,1= 0
@@ -3332,8 +3317,7 @@ If enlargement,319,1 in J2_set
 If shrinkage,319,1 in J2_set
 Sample 319 in 1 leaf nodes
 Sample 319 pass node 0 LEFT
-J0_z_320,0= 1.0
-z_start320,0= 1
+J1_z_320,0= 1
 Constraint_value_320,0 0.24513617033574853
 If enlargement,320,0 in J1_set
 If shrinkage,320,0 in J1_set
@@ -3341,7 +3325,7 @@ J2_z_320,1= 0
 Constraint_value_320,1 -0.25513617033574854
 If enlargement,320,1 in J2_set
 If shrinkage,320,1 in J2_set
-Sample 320 in 1.0 leaf nodes
+Sample 320 in 1 leaf nodes
 Sample 320 pass node 0 LEFT
 J1_z_321,0= 1
 Constraint_value_321,0 0.08007823384544321
@@ -3560,7 +3544,7 @@ J0_z_341,1= 1.0
 z_start341,1= 1
 Constraint_value_341,1 0.07025048670247704
 If enlargement,341,1 in J0_set
-If shrinkage,341,1 in J0_set
+If shrinkage,341,1 in J1_set
 Sample 341 in 1.0 leaf nodes
 Sample 341 pass node 0 RIGHT
 J0_z_342,0= 1.0
@@ -3583,7 +3567,7 @@ If shrinkage,343,0 in J1_set
 J0_z_343,1= 0.0
 z_start343,1= 0
 Constraint_value_343,1 -0.1454544539082735
-If enlargement,343,1 in J0_set
+If enlargement,343,1 in J2_set
 If shrinkage,343,1 in J2_set
 Sample 343 in 1.0 leaf nodes
 Sample 343 pass node 0 LEFT
@@ -3811,8 +3795,7 @@ If enlargement,365,1 in J2_set
 If shrinkage,365,1 in J2_set
 Sample 365 in 1 leaf nodes
 Sample 365 pass node 0 LEFT
-J0_z_366,0= 1.0
-z_start366,0= 1
+J1_z_366,0= 1
 Constraint_value_366,0 0.3098553018548836
 If enlargement,366,0 in J1_set
 If shrinkage,366,0 in J1_set
@@ -3820,7 +3803,7 @@ J2_z_366,1= 0
 Constraint_value_366,1 -0.3198553018548836
 If enlargement,366,1 in J2_set
 If shrinkage,366,1 in J2_set
-Sample 366 in 1.0 leaf nodes
+Sample 366 in 1 leaf nodes
 Sample 366 pass node 0 LEFT
 J1_z_367,0= 1
 Constraint_value_367,0 0.3960460024150855
@@ -3974,8 +3957,7 @@ If enlargement,381,1 in J2_set
 If shrinkage,381,1 in J2_set
 Sample 381 in 1 leaf nodes
 Sample 381 pass node 0 LEFT
-J0_z_382,0= 1.0
-z_start382,0= 1
+J1_z_382,0= 1
 Constraint_value_382,0 0.1824595034022285
 If enlargement,382,0 in J1_set
 If shrinkage,382,0 in J1_set
@@ -3983,7 +3965,7 @@ J2_z_382,1= 0
 Constraint_value_382,1 -0.1924595034022285
 If enlargement,382,1 in J2_set
 If shrinkage,382,1 in J2_set
-Sample 382 in 1.0 leaf nodes
+Sample 382 in 1 leaf nodes
 Sample 382 pass node 0 LEFT
 J1_z_383,0= 1
 Constraint_value_383,0 0.2963105253573219
@@ -3997,7 +3979,7 @@ Sample 383 in 1 leaf nodes
 Sample 383 pass node 0 LEFT
 J1_z_384,0= 1
 Constraint_value_384,0 0.15265673386534512
-If enlargement,384,0 in J0_set
+If enlargement,384,0 in J1_set
 If shrinkage,384,0 in J1_set
 J2_z_384,1= 0
 Constraint_value_384,1 -0.16265673386534513
@@ -4043,7 +4025,7 @@ If shrinkage,388,0 in J1_set
 J0_z_388,1= 0.0
 z_start388,1= 0
 Constraint_value_388,1 -0.15533059339353927
-If enlargement,388,1 in J0_set
+If enlargement,388,1 in J2_set
 If shrinkage,388,1 in J2_set
 Sample 388 in 1.0 leaf nodes
 Sample 388 pass node 0 LEFT
@@ -4094,7 +4076,7 @@ If shrinkage,393,0 in J2_set
 J1_z_393,1= 1
 Constraint_value_393,1 0.06456919086508851
 If enlargement,393,1 in J0_set
-If shrinkage,393,1 in J0_set
+If shrinkage,393,1 in J1_set
 Sample 393 in 1 leaf nodes
 Sample 393 pass node 0 RIGHT
 J1_z_394,0= 1
@@ -4117,8 +4099,7 @@ If enlargement,395,1 in J0_set
 If shrinkage,395,1 in J2_set
 Sample 395 in 1 leaf nodes
 Sample 395 pass node 0 LEFT
-J0_z_396,0= 1.0
-z_start396,0= 1
+J1_z_396,0= 1
 Constraint_value_396,0 0.4809524221604529
 If enlargement,396,0 in J1_set
 If shrinkage,396,0 in J1_set
@@ -4126,7 +4107,7 @@ J2_z_396,1= 0
 Constraint_value_396,1 -0.49095242216045293
 If enlargement,396,1 in J2_set
 If shrinkage,396,1 in J2_set
-Sample 396 in 1.0 leaf nodes
+Sample 396 in 1 leaf nodes
 Sample 396 pass node 0 LEFT
 J1_z_397,0= 1
 Constraint_value_397,0 0.762578773061404
@@ -4188,7 +4169,7 @@ If shrinkage,402,0 in J2_set
 J0_z_402,1= 1.0
 z_start402,1= 1
 Constraint_value_402,1 0.14955280778488023
-If enlargement,402,1 in J0_set
+If enlargement,402,1 in J1_set
 If shrinkage,402,1 in J1_set
 Sample 402 in 1.0 leaf nodes
 Sample 402 pass node 0 RIGHT
@@ -4233,7 +4214,7 @@ J0_z_406,1= 0.0
 z_start406,1= 0
 Constraint_value_406,1 -0.043007818515560396
 If enlargement,406,1 in J0_set
-If shrinkage,406,1 in J0_set
+If shrinkage,406,1 in J2_set
 Sample 406 in 1.0 leaf nodes
 Sample 406 pass node 0 LEFT
 J0_z_407,0= 0.0
@@ -4460,8 +4441,7 @@ If enlargement,428,1 in J2_set
 If shrinkage,428,1 in J2_set
 Sample 428 in 1 leaf nodes
 Sample 428 pass node 0 LEFT
-J0_z_429,0= 1.0
-z_start429,0= 1
+J1_z_429,0= 1
 Constraint_value_429,0 0.3290142072159745
 If enlargement,429,0 in J1_set
 If shrinkage,429,0 in J1_set
@@ -4469,7 +4449,7 @@ J2_z_429,1= 0
 Constraint_value_429,1 -0.33901420721597453
 If enlargement,429,1 in J2_set
 If shrinkage,429,1 in J2_set
-Sample 429 in 1.0 leaf nodes
+Sample 429 in 1 leaf nodes
 Sample 429 pass node 0 LEFT
 J1_z_430,0= 1
 Constraint_value_430,0 0.14527283115498324
@@ -4477,7 +4457,7 @@ If enlargement,430,0 in J0_set
 If shrinkage,430,0 in J1_set
 J2_z_430,1= 0
 Constraint_value_430,1 -0.15527283115498325
-If enlargement,430,1 in J0_set
+If enlargement,430,1 in J2_set
 If shrinkage,430,1 in J2_set
 Sample 430 in 1 leaf nodes
 Sample 430 pass node 0 LEFT
@@ -4524,7 +4504,7 @@ Sample 434 pass node 0 LEFT
 J2_z_435,0= 0
 Constraint_value_435,0 -0.05371800758072037
 If enlargement,435,0 in J0_set
-If shrinkage,435,0 in J0_set
+If shrinkage,435,0 in J2_set
 J1_z_435,1= 1
 Constraint_value_435,1 0.04371800758072037
 If enlargement,435,1 in J0_set
@@ -4539,7 +4519,7 @@ If shrinkage,436,0 in J2_set
 J0_z_436,1= 1.0
 z_start436,1= 1
 Constraint_value_436,1 0.17501544180729023
-If enlargement,436,1 in J0_set
+If enlargement,436,1 in J1_set
 If shrinkage,436,1 in J1_set
 Sample 436 in 1.0 leaf nodes
 Sample 436 pass node 0 RIGHT
@@ -4679,7 +4659,7 @@ J0_z_450,0= 1.0
 z_start450,0= 0
 Constraint_value_450,0 0.06472262366980402
 If enlargement,450,0 in J0_set
-If shrinkage,450,0 in J0_set
+If shrinkage,450,0 in J1_set
 J0_z_450,1= 0.0
 z_start450,1= 1
 Constraint_value_450,1 -0.07472262366980402
@@ -4759,8 +4739,7 @@ If enlargement,457,1 in J1_set
 If shrinkage,457,1 in J1_set
 Sample 457 in 1 leaf nodes
 Sample 457 pass node 0 RIGHT
-J0_z_458,0= 1.0
-z_start458,0= 1
+J1_z_458,0= 1
 Constraint_value_458,0 0.1897338134339696
 If enlargement,458,0 in J1_set
 If shrinkage,458,0 in J1_set
@@ -4768,7 +4747,7 @@ J2_z_458,1= 0
 Constraint_value_458,1 -0.19973381343396962
 If enlargement,458,1 in J2_set
 If shrinkage,458,1 in J2_set
-Sample 458 in 1.0 leaf nodes
+Sample 458 in 1 leaf nodes
 Sample 458 pass node 0 LEFT
 J1_z_459,0= 1
 Constraint_value_459,0 0.09377553357476665
@@ -4802,7 +4781,7 @@ Sample 461 in 1 leaf nodes
 Sample 461 pass node 0 LEFT
 J2_z_462,0= 0
 Constraint_value_462,0 -0.14435012810842363
-If enlargement,462,0 in J0_set
+If enlargement,462,0 in J2_set
 If shrinkage,462,0 in J2_set
 J1_z_462,1= 1
 Constraint_value_462,1 0.13435012810842362
@@ -4874,8 +4853,7 @@ If enlargement,468,1 in J1_set
 If shrinkage,468,1 in J1_set
 Sample 468 in 1 leaf nodes
 Sample 468 pass node 0 RIGHT
-J0_z_469,0= 1.0
-z_start469,0= 1
+J1_z_469,0= 1
 Constraint_value_469,0 0.23336053177587202
 If enlargement,469,0 in J1_set
 If shrinkage,469,0 in J1_set
@@ -4883,7 +4861,7 @@ J2_z_469,1= 0
 Constraint_value_469,1 -0.24336053177587202
 If enlargement,469,1 in J2_set
 If shrinkage,469,1 in J2_set
-Sample 469 in 1.0 leaf nodes
+Sample 469 in 1 leaf nodes
 Sample 469 pass node 0 LEFT
 J0_z_470,0= 1.0
 z_start470,0= 1
@@ -4899,7 +4877,7 @@ Sample 470 in 1.0 leaf nodes
 Large epsilon! -0.009999999999994505 -5.495603971894525e-15
 J1_z_471,0= 1
 Constraint_value_471,0 0.16859667454955382
-If enlargement,471,0 in J0_set
+If enlargement,471,0 in J1_set
 If shrinkage,471,0 in J1_set
 J2_z_471,1= 0
 Constraint_value_471,1 -0.17859667454955383
@@ -5125,8 +5103,7 @@ If enlargement,492,1 in J2_set
 If shrinkage,492,1 in J2_set
 Sample 492 in 1 leaf nodes
 Sample 492 pass node 0 LEFT
-J0_z_493,0= 1.0
-z_start493,0= 1
+J1_z_493,0= 1
 Constraint_value_493,0 0.34647183760327865
 If enlargement,493,0 in J1_set
 If shrinkage,493,0 in J1_set
@@ -5134,7 +5111,7 @@ J2_z_493,1= 0
 Constraint_value_493,1 -0.35647183760327866
 If enlargement,493,1 in J2_set
 If shrinkage,493,1 in J2_set
-Sample 493 in 1.0 leaf nodes
+Sample 493 in 1 leaf nodes
 Sample 493 pass node 0 LEFT
 J1_z_494,0= 1
 Constraint_value_494,0 0.4036293250243128
@@ -5195,7 +5172,7 @@ If shrinkage,499,0 in J2_set
 J1_z_499,1= 1
 Constraint_value_499,1 0.06144474425965186
 If enlargement,499,1 in J0_set
-If shrinkage,499,1 in J0_set
+If shrinkage,499,1 in J1_set
 Sample 499 in 1 leaf nodes
 Sample 499 pass node 0 RIGHT
 J1_z_500,0= 1
@@ -5268,8 +5245,7 @@ If enlargement,506,1 in J2_set
 If shrinkage,506,1 in J2_set
 Sample 506 in 1 leaf nodes
 Sample 506 pass node 0 LEFT
-J0_z_507,0= 1.0
-z_start507,0= 1
+J1_z_507,0= 1
 Constraint_value_507,0 0.1966587868052735
 If enlargement,507,0 in J1_set
 If shrinkage,507,0 in J1_set
@@ -5277,7 +5253,7 @@ J2_z_507,1= 0
 Constraint_value_507,1 -0.2066587868052735
 If enlargement,507,1 in J2_set
 If shrinkage,507,1 in J2_set
-Sample 507 in 1.0 leaf nodes
+Sample 507 in 1 leaf nodes
 Sample 507 pass node 0 LEFT
 J1_z_508,0= 1
 Constraint_value_508,0 0.217720403344824
@@ -5319,8 +5295,7 @@ If enlargement,511,1 in J2_set
 If shrinkage,511,1 in J2_set
 Sample 511 in 1 leaf nodes
 Sample 511 pass node 0 LEFT
-J0_z_512,0= 1.0
-z_start512,0= 1
+J1_z_512,0= 1
 Constraint_value_512,0 0.23805935499756498
 If enlargement,512,0 in J1_set
 If shrinkage,512,0 in J1_set
@@ -5328,7 +5303,7 @@ J2_z_512,1= 0
 Constraint_value_512,1 -0.24805935499756498
 If enlargement,512,1 in J2_set
 If shrinkage,512,1 in J2_set
-Sample 512 in 1.0 leaf nodes
+Sample 512 in 1 leaf nodes
 Sample 512 pass node 0 LEFT
 J1_z_513,0= 1
 Constraint_value_513,0 0.6989401136200517
@@ -5342,7 +5317,7 @@ Sample 513 in 1 leaf nodes
 Sample 513 pass node 0 LEFT
 J2_z_514,0= 0
 Constraint_value_514,0 -0.15626327334131784
-If enlargement,514,0 in J0_set
+If enlargement,514,0 in J2_set
 If shrinkage,514,0 in J2_set
 J1_z_514,1= 1
 Constraint_value_514,1 0.14626327334131783
@@ -5496,7 +5471,7 @@ If enlargement,529,0 in J2_set
 If shrinkage,529,0 in J2_set
 J1_z_529,1= 1
 Constraint_value_529,1 0.167803376323729
-If enlargement,529,1 in J0_set
+If enlargement,529,1 in J1_set
 If shrinkage,529,1 in J1_set
 Sample 529 in 1 leaf nodes
 Sample 529 pass node 0 RIGHT
@@ -5845,13 +5820,13 @@ If shrinkage,563,0 in J2_set
 J1_z_563,1= 1
 Constraint_value_563,1 0.07208140528946062
 If enlargement,563,1 in J0_set
-If shrinkage,563,1 in J0_set
+If shrinkage,563,1 in J1_set
 Sample 563 in 1 leaf nodes
 Sample 563 pass node 0 RIGHT
 J0_z_564,0= 0.0
 z_start564,0= 0
 Constraint_value_564,0 -0.14479708175000994
-If enlargement,564,0 in J0_set
+If enlargement,564,0 in J2_set
 If shrinkage,564,0 in J2_set
 J0_z_564,1= 1.0
 z_start564,1= 1
@@ -5906,7 +5881,7 @@ If enlargement,569,0 in J0_set
 If shrinkage,569,0 in J1_set
 J2_z_569,1= 0
 Constraint_value_569,1 -0.14642807732111512
-If enlargement,569,1 in J0_set
+If enlargement,569,1 in J2_set
 If shrinkage,569,1 in J2_set
 Sample 569 in 1 leaf nodes
 Sample 569 pass node 0 LEFT
@@ -5933,7 +5908,7 @@ Sample 571 pass node 0 LEFT
 J2_z_572,0= 0
 Constraint_value_572,0 -0.04277778273727395
 If enlargement,572,0 in J0_set
-If shrinkage,572,0 in J0_set
+If shrinkage,572,0 in J2_set
 J1_z_572,1= 1
 Constraint_value_572,1 0.03277778273727395
 If enlargement,572,1 in J0_set
@@ -5949,7 +5924,7 @@ J0_z_573,1= 0.0
 z_start573,1= 1
 Constraint_value_573,1 -0.04501660967502124
 If enlargement,573,1 in J0_set
-If shrinkage,573,1 in J0_set
+If shrinkage,573,1 in J2_set
 Sample 573 in 1.0 leaf nodes
 Sample 573 pass node 0 LEFT
 J1_z_574,0= 1
@@ -5998,7 +5973,7 @@ If enlargement,578,0 in J2_set
 If shrinkage,578,0 in J2_set
 J1_z_578,1= 1
 Constraint_value_578,1 0.17273148332471344
-If enlargement,578,1 in J0_set
+If enlargement,578,1 in J1_set
 If shrinkage,578,1 in J1_set
 Sample 578 in 1 leaf nodes
 Sample 578 pass node 0 RIGHT
@@ -6008,7 +5983,7 @@ If enlargement,579,0 in J2_set
 If shrinkage,579,0 in J2_set
 J1_z_579,1= 1
 Constraint_value_579,1 0.16102510299196016
-If enlargement,579,1 in J0_set
+If enlargement,579,1 in J1_set
 If shrinkage,579,1 in J1_set
 Sample 579 in 1 leaf nodes
 Sample 579 pass node 0 RIGHT
@@ -6048,7 +6023,7 @@ Sample 582 in 1 leaf nodes
 Sample 582 pass node 0 LEFT
 J1_z_583,0= 1
 Constraint_value_583,0 0.17228724500422632
-If enlargement,583,0 in J0_set
+If enlargement,583,0 in J1_set
 If shrinkage,583,0 in J1_set
 J2_z_583,1= 0
 Constraint_value_583,1 -0.18228724500422633
@@ -6106,8 +6081,7 @@ If enlargement,588,1 in J2_set
 If shrinkage,588,1 in J2_set
 Sample 588 in 1 leaf nodes
 Sample 588 pass node 0 LEFT
-J0_z_589,0= 1.0
-z_start589,0= 1
+J1_z_589,0= 1
 Constraint_value_589,0 0.07651656491230996
 If enlargement,589,0 in J0_set
 If shrinkage,589,0 in J1_set
@@ -6115,7 +6089,7 @@ J2_z_589,1= 0
 Constraint_value_589,1 -0.08651656491230995
 If enlargement,589,1 in J0_set
 If shrinkage,589,1 in J2_set
-Sample 589 in 1.0 leaf nodes
+Sample 589 in 1 leaf nodes
 Sample 589 pass node 0 LEFT
 J1_z_590,0= 1
 Constraint_value_590,0 0.5458982435877529
@@ -6301,8 +6275,7 @@ If enlargement,607,1 in J2_set
 If shrinkage,607,1 in J2_set
 Sample 607 in 1 leaf nodes
 Sample 607 pass node 0 LEFT
-J0_z_608,0= 1.0
-z_start608,0= 1
+J1_z_608,0= 1
 Constraint_value_608,0 0.008968299685125136
 If enlargement,608,0 in J0_set
 If shrinkage,608,0 in J0_set
@@ -6310,7 +6283,7 @@ J2_z_608,1= 0
 Constraint_value_608,1 -0.018968299685125138
 If enlargement,608,1 in J0_set
 If shrinkage,608,1 in J0_set
-Sample 608 in 1.0 leaf nodes
+Sample 608 in 1 leaf nodes
 Sample 608 pass node 0 LEFT
 J0_z_609,0= 1.0
 z_start609,0= 1
@@ -6432,7 +6405,7 @@ If shrinkage,620,0 in J1_set
 J0_z_620,1= 0.0
 z_start620,1= 0
 Constraint_value_620,1 -0.15613681574552224
-If enlargement,620,1 in J0_set
+If enlargement,620,1 in J2_set
 If shrinkage,620,1 in J2_set
 Sample 620 in 1.0 leaf nodes
 Sample 620 pass node 0 LEFT
@@ -6628,7 +6601,7 @@ If shrinkage,639,0 in J1_set
 J0_z_639,1= 0.0
 z_start639,1= 0
 Constraint_value_639,1 -0.14634480241479803
-If enlargement,639,1 in J0_set
+If enlargement,639,1 in J2_set
 If shrinkage,639,1 in J2_set
 Sample 639 in 1.0 leaf nodes
 Sample 639 pass node 0 LEFT
@@ -6682,8 +6655,7 @@ If enlargement,644,1 in J2_set
 If shrinkage,644,1 in J2_set
 Sample 644 in 1 leaf nodes
 Sample 644 pass node 0 LEFT
-J0_z_645,0= 1.0
-z_start645,0= 1
+J1_z_645,0= 1
 Constraint_value_645,0 0.19875024196093502
 If enlargement,645,0 in J1_set
 If shrinkage,645,0 in J1_set
@@ -6691,7 +6663,7 @@ J2_z_645,1= 0
 Constraint_value_645,1 -0.20875024196093503
 If enlargement,645,1 in J2_set
 If shrinkage,645,1 in J2_set
-Sample 645 in 1.0 leaf nodes
+Sample 645 in 1 leaf nodes
 Sample 645 pass node 0 LEFT
 J1_z_646,0= 1
 Constraint_value_646,0 0.32680763888160774
@@ -6703,8 +6675,7 @@ If enlargement,646,1 in J2_set
 If shrinkage,646,1 in J2_set
 Sample 646 in 1 leaf nodes
 Sample 646 pass node 0 LEFT
-J0_z_647,0= 1.0
-z_start647,0= 1
+J1_z_647,0= 1
 Constraint_value_647,0 0.28291082701687853
 If enlargement,647,0 in J1_set
 If shrinkage,647,0 in J1_set
@@ -6712,7 +6683,7 @@ J2_z_647,1= 0
 Constraint_value_647,1 -0.29291082701687854
 If enlargement,647,1 in J2_set
 If shrinkage,647,1 in J2_set
-Sample 647 in 1.0 leaf nodes
+Sample 647 in 1 leaf nodes
 Sample 647 pass node 0 LEFT
 J2_z_648,0= 0
 Constraint_value_648,0 -2.067361662129225
@@ -6843,7 +6814,7 @@ Sample 659 pass node 0 LEFT
 J0_z_660,0= 1.0
 z_start660,0= 1
 Constraint_value_660,0 0.16782606756665946
-If enlargement,660,0 in J0_set
+If enlargement,660,0 in J1_set
 If shrinkage,660,0 in J1_set
 J0_z_660,1= 0.0
 z_start660,1= 0
@@ -6976,7 +6947,7 @@ Sample 672 in 1 leaf nodes
 Sample 672 pass node 0 RIGHT
 J1_z_673,0= 1
 Constraint_value_673,0 0.15055269077017153
-If enlargement,673,0 in J0_set
+If enlargement,673,0 in J1_set
 If shrinkage,673,0 in J1_set
 J2_z_673,1= 0
 Constraint_value_673,1 -0.16055269077017154
@@ -7119,7 +7090,7 @@ J0_z_686,1= 1.0
 z_start686,1= 0
 Constraint_value_686,1 0.06245904650307411
 If enlargement,686,1 in J0_set
-If shrinkage,686,1 in J0_set
+If shrinkage,686,1 in J1_set
 Sample 686 in 1.0 leaf nodes
 Sample 686 pass node 0 RIGHT
 J2_z_687,0= 0
@@ -7136,7 +7107,7 @@ J0_z_688,0= 1.0
 z_start688,0= 1
 Constraint_value_688,0 0.07290668718288196
 If enlargement,688,0 in J0_set
-If shrinkage,688,0 in J0_set
+If shrinkage,688,0 in J1_set
 J0_z_688,1= 0.0
 z_start688,1= 0
 Constraint_value_688,1 -0.08290668718288195
@@ -7248,8 +7219,7 @@ If enlargement,698,1 in J1_set
 If shrinkage,698,1 in J1_set
 Sample 698 in 1 leaf nodes
 Sample 698 pass node 0 RIGHT
-J0_z_699,0= 1.0
-z_start699,0= 1
+J1_z_699,0= 1
 Constraint_value_699,0 0.23692765160823848
 If enlargement,699,0 in J1_set
 If shrinkage,699,0 in J1_set
@@ -7257,7 +7227,7 @@ J2_z_699,1= 0
 Constraint_value_699,1 -0.24692765160823849
 If enlargement,699,1 in J2_set
 If shrinkage,699,1 in J2_set
-Sample 699 in 1.0 leaf nodes
+Sample 699 in 1 leaf nodes
 Sample 699 pass node 0 LEFT
 J1_z_700,0= 1
 Constraint_value_700,0 0.5666596752681159
@@ -7443,8 +7413,7 @@ If enlargement,717,1 in J0_set
 If shrinkage,717,1 in J0_set
 Sample 717 in 1.0 leaf nodes
 Sample 717 pass node 0 LEFT
-J0_z_718,0= 1.0
-z_start718,0= 1
+J1_z_718,0= 1
 Constraint_value_718,0 0.08672660635884
 If enlargement,718,0 in J0_set
 If shrinkage,718,0 in J1_set
@@ -7452,7 +7421,7 @@ J2_z_718,1= 0
 Constraint_value_718,1 -0.09672660635883999
 If enlargement,718,1 in J0_set
 If shrinkage,718,1 in J2_set
-Sample 718 in 1.0 leaf nodes
+Sample 718 in 1 leaf nodes
 Sample 718 pass node 0 LEFT
 J2_z_719,0= 0
 Constraint_value_719,0 -0.6562458109378844
@@ -7464,16 +7433,15 @@ If enlargement,719,1 in J1_set
 If shrinkage,719,1 in J1_set
 Sample 719 in 1 leaf nodes
 Sample 719 pass node 0 RIGHT
-J0_z_720,0= 1.0
-z_start720,0= 1
+J1_z_720,0= 1
 Constraint_value_720,0 0.1337500968842642
 If enlargement,720,0 in J0_set
 If shrinkage,720,0 in J1_set
 J2_z_720,1= 0
 Constraint_value_720,1 -0.1437500968842642
-If enlargement,720,1 in J0_set
+If enlargement,720,1 in J2_set
 If shrinkage,720,1 in J2_set
-Sample 720 in 1.0 leaf nodes
+Sample 720 in 1 leaf nodes
 Sample 720 pass node 0 LEFT
 J1_z_721,0= 1
 Constraint_value_721,0 0.2562299280301388
@@ -7511,7 +7479,7 @@ If enlargement,724,0 in J0_set
 If shrinkage,724,0 in J1_set
 J2_z_724,1= 0
 Constraint_value_724,1 -0.15354296772284282
-If enlargement,724,1 in J0_set
+If enlargement,724,1 in J2_set
 If shrinkage,724,1 in J2_set
 Sample 724 in 1 leaf nodes
 Sample 724 pass node 0 LEFT
@@ -7557,8 +7525,7 @@ If enlargement,728,1 in J0_set
 If shrinkage,728,1 in J2_set
 Sample 728 in 1.0 leaf nodes
 Sample 728 pass node 0 LEFT
-J0_z_729,0= 1.0
-z_start729,0= 1
+J1_z_729,0= 1
 Constraint_value_729,0 0.3918995900653294
 If enlargement,729,0 in J1_set
 If shrinkage,729,0 in J1_set
@@ -7566,7 +7533,7 @@ J2_z_729,1= 0
 Constraint_value_729,1 -0.4018995900653294
 If enlargement,729,1 in J2_set
 If shrinkage,729,1 in J2_set
-Sample 729 in 1.0 leaf nodes
+Sample 729 in 1 leaf nodes
 Sample 729 pass node 0 LEFT
 J1_z_730,0= 1
 Constraint_value_730,0 0.47655047009943174
@@ -7580,7 +7547,7 @@ Sample 730 in 1 leaf nodes
 Sample 730 pass node 0 LEFT
 J2_z_731,0= 0
 Constraint_value_731,0 -0.15217601835061179
-If enlargement,731,0 in J0_set
+If enlargement,731,0 in J2_set
 If shrinkage,731,0 in J2_set
 J1_z_731,1= 1
 Constraint_value_731,1 0.14217601835061178
@@ -7661,7 +7628,7 @@ J0_z_738,1= 0.0
 z_start738,1= 0
 Constraint_value_738,1 -0.047826222529928734
 If enlargement,738,1 in J0_set
-If shrinkage,738,1 in J0_set
+If shrinkage,738,1 in J2_set
 Sample 738 in 1.0 leaf nodes
 Sample 738 pass node 0 LEFT
 J1_z_739,0= 1
@@ -7784,7 +7751,7 @@ If shrinkage,750,0 in J2_set
 J0_z_750,1= 1.0
 z_start750,1= 1
 Constraint_value_750,1 0.17374419291525367
-If enlargement,750,1 in J0_set
+If enlargement,750,1 in J1_set
 If shrinkage,750,1 in J1_set
 Sample 750 in 1.0 leaf nodes
 Sample 750 pass node 0 RIGHT
@@ -7952,7 +7919,7 @@ If enlargement,766,0 in J0_set
 If shrinkage,766,0 in J1_set
 J2_z_766,1= 0
 Constraint_value_766,1 -0.15250362121019823
-If enlargement,766,1 in J0_set
+If enlargement,766,1 in J2_set
 If shrinkage,766,1 in J2_set
 Sample 766 in 1 leaf nodes
 Sample 766 pass node 0 LEFT
@@ -7964,7 +7931,7 @@ If shrinkage,767,0 in J1_set
 J0_z_767,1= 0.0
 z_start767,1= 0
 Constraint_value_767,1 -0.14761692803430604
-If enlargement,767,1 in J0_set
+If enlargement,767,1 in J2_set
 If shrinkage,767,1 in J2_set
 Sample 767 in 1.0 leaf nodes
 Sample 767 pass node 0 LEFT
@@ -8047,7 +8014,7 @@ J0_z_775,1= 1.0
 z_start775,1= 1
 Constraint_value_775,1 0.06322548579768301
 If enlargement,775,1 in J0_set
-If shrinkage,775,1 in J0_set
+If shrinkage,775,1 in J1_set
 Sample 775 in 1.0 leaf nodes
 Sample 775 pass node 0 RIGHT
 J1_z_776,0= 1
@@ -8182,7 +8149,7 @@ Sample 788 in 1 leaf nodes
 Sample 788 pass node 0 LEFT
 J1_z_789,0= 1
 Constraint_value_789,0 0.16712954335502375
-If enlargement,789,0 in J0_set
+If enlargement,789,0 in J1_set
 If shrinkage,789,0 in J1_set
 J2_z_789,1= 0
 Constraint_value_789,1 -0.17712954335502376
@@ -8230,7 +8197,7 @@ If shrinkage,793,0 in J1_set
 J0_z_793,1= 0.0
 z_start793,1= 0
 Constraint_value_793,1 -0.13624773788054667
-If enlargement,793,1 in J0_set
+If enlargement,793,1 in J2_set
 If shrinkage,793,1 in J2_set
 Sample 793 in 1.0 leaf nodes
 Sample 793 pass node 0 LEFT
@@ -8750,12 +8717,11 @@ If enlargement,844,0 in J0_set
 If shrinkage,844,0 in J1_set
 J2_z_844,1= 0
 Constraint_value_844,1 -0.14161394382841774
-If enlargement,844,1 in J0_set
+If enlargement,844,1 in J2_set
 If shrinkage,844,1 in J2_set
 Sample 844 in 1 leaf nodes
 Sample 844 pass node 0 LEFT
-J0_z_845,0= 1.0
-z_start845,0= 1
+J1_z_845,0= 1
 Constraint_value_845,0 0.38206638937614756
 If enlargement,845,0 in J1_set
 If shrinkage,845,0 in J1_set
@@ -8763,7 +8729,7 @@ J2_z_845,1= 0
 Constraint_value_845,1 -0.3920663893761476
 If enlargement,845,1 in J2_set
 If shrinkage,845,1 in J2_set
-Sample 845 in 1.0 leaf nodes
+Sample 845 in 1 leaf nodes
 Sample 845 pass node 0 LEFT
 J1_z_846,0= 1
 Constraint_value_846,0 0.8337011676959905
@@ -8808,7 +8774,7 @@ Sample 849 pass node 0 LEFT
 J1_z_850,0= 1
 Constraint_value_850,0 0.06461868202003013
 If enlargement,850,0 in J0_set
-If shrinkage,850,0 in J0_set
+If shrinkage,850,0 in J1_set
 J2_z_850,1= 0
 Constraint_value_850,1 -0.07461868202003012
 If enlargement,850,1 in J0_set
@@ -8858,7 +8824,7 @@ Sample 854 pass node 0 RIGHT
 J0_z_855,0= 1.0
 z_start855,0= 1
 Constraint_value_855,0 0.16460531348622537
-If enlargement,855,0 in J0_set
+If enlargement,855,0 in J1_set
 If shrinkage,855,0 in J1_set
 J0_z_855,1= 0.0
 z_start855,1= 0
@@ -8889,15 +8855,15 @@ If enlargement,857,1 in J0_set
 If shrinkage,857,1 in J2_set
 Sample 857 in 1.0 leaf nodes
 Sample 857 pass node 0 LEFT
-If enlargement, epsilon_1 =  0.17549612088232625
-If enlargement, epsilon_2 =  0.15733235556364872
+If enlargement, epsilon_1 =  0.14791770417573305
+If enlargement, epsilon_2 =  0.13610442127173072
 If enlargement, epsilon_1 should >=  0.5063250593433968
 If enlargement, epsilon_2 should >=  0.5163250593433968
-If shrinkage, epsilon_1 =  0.07465072235093581
-If shrinkage, epsilon_2 =  0.05658542379222607
+If shrinkage, epsilon_1 =  0.06046583243088446
+If shrinkage, epsilon_2 =  0.04256627612938056
 If shrinkage, epsilon_1 should <  -2.220446049250313e-16
 If shrinkage, epsilon_2 should <  0.009999999999999778
 Number of samples fail to branch due to large epsilon:  14
 Number of samples have no treatment: 0
-J0,J1,J2: 304 689 723
+J0,J1,J2: 270 723 723
 length_value_positive,length_value_negative: 842 874
