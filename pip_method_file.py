@@ -91,11 +91,11 @@ if estimator=='IPW':
     b_start[2]=60
 elif estimator=='DR':
     a_start[0][6]=1
-    a_start[1][16]=1
+    a_start[1][1]=1
     a_start[2][9]=1 
-    b_start[0]=78
-    b_start[1]=4.6
-    b_start[2]=4.0
+    b_start[0]=82
+    b_start[1]=158
+    b_start[2]=4.1
 '''
 if estimator=='IPW':
     a_start[0][18]=1
