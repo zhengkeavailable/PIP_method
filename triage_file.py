@@ -95,19 +95,20 @@ def build_decision_tree_model(model, x, Trt, Trt_is, y, propensity_model, treatm
                 J1_count += 1
                 for k in A_R[t]:
                     model.addConstr(
-                        gp.quicksum(a[k][i] * x[s][i] for i in range(p)) - b[k] >= B_lb * (1 - z_start[t][s]))
+                        gp.quicksum(a[k][i] * x[s][i] for i in range(p)) - b[k] - epsilon >= B_lb * (1 - z_start[t][s]))
                 for k in A_L[t]:
-                    model.addConstr(-(gp.quicksum(a[k][i] * x[s][i] for i in range(p))) + b[k] - epsilon >= B_lb * (
-                                1 - z_start[t][s]))
+                    model.addConstr(-(gp.quicksum(a[k][i] * x[s][i] for i in range(p))) + b[k] >= B_lb * (
+                            1 - z_start[t][s]))
             elif constraint_value[t][s] >= -epsilon_2:
                 z[s][t].setAttr(gp.GRB.Attr.Start, z_start[t][s])
                 J0_set[t].append(s)
                 J0_count += 1
                 for k in A_R[t]:
-                    model.addConstr(gp.quicksum(a[k][i] * x[s][i] for i in range(p)) - b[k] >= B_lb * (1 - z[s][t]))
+                    model.addConstr(
+                        gp.quicksum(a[k][i] * x[s][i] for i in range(p)) - b[k] - epsilon >= B_lb * (1 - z[s][t]))
                 for k in A_L[t]:
                     model.addConstr(
-                        -(gp.quicksum(a[k][i] * x[s][i] for i in range(p))) + b[k] - epsilon >= B_lb * (1 - z[s][t]))
+                        -(gp.quicksum(a[k][i] * x[s][i] for i in range(p))) + b[k] >= B_lb * (1 - z[s][t]))
             else:
                 J2_set[t].append(s)
                 model.remove(z[s][t])
@@ -136,13 +137,13 @@ def build_decision_tree_model(model, x, Trt, Trt_is, y, propensity_model, treatm
     for s in range(N):
         fixed_sum = 0
         J0_s = []
-        constraint_true=0
+        constraint_true = 0
         for t in range(2 ** D):
             if s in J1_set[t]:
                 fixed_sum += 1
             elif s in J0_set[t]:
                 J0_s.append(t)
-                constraint_true=1
+                constraint_true = 1
         if constraint_true == 1:
             model.addConstr(gp.quicksum(z[s][t] for t in J0_s) + fixed_sum == 1)
 
@@ -158,7 +159,7 @@ def build_decision_tree_model(model, x, Trt, Trt_is, y, propensity_model, treatm
         for j in range(num_j):
             model.addConstr(
                 M[t][j] >= gp.quicksum(z[s][t] for s in J0_set[t]) + sum(z_start[t][s] for s in J1_set[t]) - M_ub * (
-                            1 - c[t][j]))
+                        1 - c[t][j]))
 
     # Resource proportion
     gamma = [0.4, 0.2, 0.3, 0.5]
@@ -232,11 +233,11 @@ def build_decision_tree_model(model, x, Trt, Trt_is, y, propensity_model, treatm
         for s in range(N):
             constraint_value[t][s] = 1e4
             for k in A_R[t]:
-                if sum(a[k][i].X * x[s][i] for i in range(p)) - b[k].X < constraint_value[t][s]:
-                    constraint_value[t][s] = sum(a[k][i].X * x[s][i] for i in range(p)) - b[k].X
+                if sum(a[k][i].X * x[s][i] for i in range(p)) - b[k].X - epsilon < constraint_value[t][s]:
+                    constraint_value[t][s] = sum(a[k][i].X * x[s][i] for i in range(p)) - b[k].X - epsilon
             for k in A_L[t]:
-                if -(sum(a[k][i].X * x[s][i] for i in range(p))) + b[k].X - epsilon < constraint_value[t][s]:
-                    constraint_value[t][s] = -(sum(a[k][i].X * x[s][i] for i in range(p))) + b[k].X - epsilon
+                if -(sum(a[k][i].X * x[s][i] for i in range(p))) + b[k].X < constraint_value[t][s]:
+                    constraint_value[t][s] = -(sum(a[k][i].X * x[s][i] for i in range(p))) + b[k].X
             if constraint_value[t][s] < 0:
                 value_negative.append(constraint_value[t][s])
             elif constraint_value[t][s] > 0:
@@ -294,18 +295,18 @@ def build_decision_tree_model(model, x, Trt, Trt_is, y, propensity_model, treatm
                 z_zero += 1
             k = 0
             while k < 2 ** D - 1:
-                if sum(a[k][i].X * x[s][i] for i in range(p)) - b[k].X >= 0:
+                if sum(a[k][i].X * x[s][i] for i in range(p)) - b[k].X - epsilon >= 0:
                     print('Sample ' + str(s) + ' pass node ' + str(k) + ' RIGHT', file=f)
                     k = 2 * k + 2
-                elif -(sum(a[k][i].X * x[s][i] for i in range(p))) + b[k].X - epsilon >= 0:
+                elif -(sum(a[k][i].X * x[s][i] for i in range(p))) + b[k].X >= 0:
                     print('Sample ' + str(s) + ' pass node ' + str(k) + ' LEFT', file=f)
                     k = 2 * k + 1
                 else:
                     no_branch += 1
-                    print('Large epsilon!', sum(a[k][i].X * x[s][i] for i in range(p)) - b[k].X,
-                          -(sum(a[k][i].X * x[s][i] for i in range(p))) + b[k].X - epsilon, file=f)
+                    print('Large epsilon!', sum(a[k][i].X * x[s][i] for i in range(p)) - b[k].X - epsilon,
+                          -(sum(a[k][i].X * x[s][i] for i in range(p))) + b[k].X, file=f)
                     k = 2 ** D - 1
-        if mode=="MIP" and iterations == 0:
+        if mode == "MIP" and iterations == 0:
             en_e1, en_e2, en_e1_lb, en_e2_lb, sh_e1, sh_e2, sh_e1_ub, sh_e2_ub = 0, 0, 0, 0, 0, 0, 0, 0
         else:
             en_e1 = np.percentile(value_positive, min(enlargement_rate * base_rate, pip_max_rate))

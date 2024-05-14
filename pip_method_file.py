@@ -82,20 +82,20 @@ elif estimator == 'DR':
     b_start[0] = 56
 '''
 # depth = 2
-if estimator=='IPW':
-    a_start[0][7]=1
-    a_start[1][11]=1
-    a_start[2][2]=1 
-    b_start[0]=98
-    b_start[1]=20
-    b_start[2]=60
-elif estimator=='DR':
-    a_start[0][6]=1
-    a_start[1][1]=1
-    a_start[2][9]=1 
-    b_start[0]=82
-    b_start[1]=158
-    b_start[2]=4.1
+if estimator == 'IPW':
+    a_start[0][7] = 1
+    a_start[1][11] = 1
+    a_start[2][2] = 1
+    b_start[0] = 98
+    b_start[1] = 20
+    b_start[2] = 60
+elif estimator == 'DR':
+    a_start[0][6] = 1
+    a_start[1][1] = 1
+    a_start[2][9] = 1
+    b_start[0] = 82
+    b_start[1] = 158
+    b_start[2] = 4.1
 '''
 if estimator=='IPW':
     a_start[0][18]=1
@@ -153,11 +153,11 @@ for t in range(2 ** D):
     for s in range(N):
         constraint_value[t][s] = B_ub
         for k in A_R[t]:
-            if sum(a_start[k][i] * x[s][i] for i in range(p)) - b_start[k] < constraint_value[t][s]:
-                constraint_value[t][s] = sum(a_start[k][i] * x[s][i] for i in range(p)) - b_start[k]
+            if sum(a_start[k][i] * x[s][i] for i in range(p)) - b_start[k] - epsilon < constraint_value[t][s]:
+                constraint_value[t][s] = sum(a_start[k][i] * x[s][i] for i in range(p)) - b_start[k] - epsilon
         for k in A_L[t]:
-            if sum(-a_start[k][i] * x[s][i] for i in range(p)) + b_start[k] - epsilon < constraint_value[t][s]:
-                constraint_value[t][s] = sum(-a_start[k][i] * x[s][i] for i in range(p)) + b_start[k] - epsilon
+            if sum(-a_start[k][i] * x[s][i] for i in range(p)) + b_start[k] < constraint_value[t][s]:
+                constraint_value[t][s] = sum(-a_start[k][i] * x[s][i] for i in range(p)) + b_start[k]
         if constraint_value[t][s] < 0:
             initial_value_negative.append(constraint_value[t][s])
         elif constraint_value[t][s] > 0:
