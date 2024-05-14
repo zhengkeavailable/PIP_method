@@ -78,8 +78,8 @@ if estimator == 'IPW':
     a_start[0][11] = 1
     b_start[0] = 22
 elif estimator == 'DR':
-    a_start[0][10] = 1
-    b_start[0] = 58
+    a_start[0][2] = 1
+    b_start[0] = 56
 '''
 # depth = 2
 if estimator=='IPW':
