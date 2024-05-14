@@ -19,7 +19,7 @@ df_CTS = pd.read_csv("inspire_CTS_0_120_icuhalfday.csv")
 # N = 429  # Sample size
 N = 858  # Sample size
 p = 37  # Dimension of features
-D = 2  # Depth
+D = 1  # Depth
 B_lb = -1e3  # Lower bound of \Phi_st
 B_ub = 1e5  # Upper bound of \Phi_st
 M_ub = 1e5  # Upper bound: big M
@@ -73,7 +73,7 @@ for k in range(2 ** D - 1):
     b_start[k] = 0
 
 # 0. Initialization from policy tree
-'''
+
 if estimator == 'IPW':
     a_start[0][11] = 1
     b_start[0] = 22
@@ -96,7 +96,7 @@ elif estimator == 'DR':
     b_start[0] = 82
     b_start[1] = 158
     b_start[2] = 4.1
-'''
+
 if estimator=='IPW':
     a_start[0][18]=1
     a_start[1][2]=1
