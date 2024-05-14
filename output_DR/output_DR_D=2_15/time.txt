@@ -1,0 +1,7 @@
+Total time of pip method after iteration 0 62.63327741622925 s
+Total time of pip method after iteration 1 125.35411381721497 s
+Total time of pip method after iteration 2 187.99188828468323 s
+Total time of pip method after iteration 3 199.99513912200928 s
+Total time of pip method after iteration 4 204.13448238372803 s
+Total time of pip method after iteration 5 208.4960527420044 s
+Total time of pip method after iteration 6 211.47952461242676 s
