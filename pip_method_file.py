@@ -174,7 +174,7 @@ mode = "PIP"
 # mode="PIP"
 enlargement_rate = 1.4
 shrinkage_rate = 0.7
-base_rate = 10
+base_rate = 15
 pip_max_rate = 40
 if mode == "MIP":
     base_rate = 100
