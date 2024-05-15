@@ -1,0 +1,79 @@
+
+Gurobi 11.0.1 (win64) logging started Wed May 15 15:00:31 2024
+
+Set parameter LogFile to value "output/solver_log46.txt"
+Gurobi Optimizer version 11.0.1 build v11.0.1rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 3347 rows, 985 columns and 64933 nonzeros
+Model fingerprint: 0xea09309e
+Variable types: 248 continuous, 737 integer (737 binary)
+Coefficient statistics:
+  Matrix range     [4e-01, 1e+05]
+  Objective range  [1e+00, 1e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e-02, 1e+05]
+
+User MIP start produced solution with objective 39207.3 (0.01s)
+User MIP start produced solution with objective 39981.7 (0.01s)
+User MIP start produced solution with objective 39981.7 (0.01s)
+Loaded user MIP start with objective 39981.7
+
+Presolve removed 462 rows and 367 columns
+Presolve time: 0.06s
+Presolved: 2885 rows, 618 columns, 58219 nonzeros
+Variable types: 234 continuous, 384 integer (380 binary)
+
+Root relaxation: objective 5.537885e+04, 1017 iterations, 0.05 seconds (0.10 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 55378.8525    0   67 39981.7251 55378.8525  38.5%     -    0s
+     0     0 54873.8102    0  100 39981.7251 54873.8102  37.2%     -    0s
+     0     0 54789.8531    0   90 39981.7251 54789.8531  37.0%     -    0s
+     0     0 54789.8531    0  111 39981.7251 54789.8531  37.0%     -    0s
+     0     0 54789.8531    0  117 39981.7251 54789.8531  37.0%     -    0s
+     0     0 53660.2041    0  103 39981.7251 53660.2041  34.2%     -    0s
+     0     0 53648.7793    0   85 39981.7251 53648.7793  34.2%     -    1s
+     0     0 53648.7793    0   85 39981.7251 53648.7793  34.2%     -    1s
+     0     0 50552.9601    0   75 39981.7251 50552.9601  26.4%     -    1s
+     0     0 50545.8491    0   63 39981.7251 50545.8491  26.4%     -    1s
+     0     0 50518.2441    0   62 39981.7251 50518.2441  26.4%     -    1s
+     0     0 50518.2441    0   67 39981.7251 50518.2441  26.4%     -    1s
+     0     0 50282.7510    0   85 39981.7251 50282.7510  25.8%     -    2s
+     0     0 50245.6488    0   69 39981.7251 50245.6488  25.7%     -    2s
+     0     0 50245.6488    0   65 39981.7251 50245.6488  25.7%     -    2s
+     0     0 50245.6488    0   63 39981.7251 50245.6488  25.7%     -    2s
+     0     0 50076.8744    0   64 39981.7251 50076.8744  25.2%     -    2s
+     0     0 50076.8744    0   64 39981.7251 50076.8744  25.2%     -    2s
+     0     2 50076.8744    0   64 39981.7251 50076.8744  25.2%     -    3s
+    31    29 48629.6842    6   57 39981.7251 49514.3769  23.8%   941    5s
+   410   160     cutoff    7      39981.7251 42787.1469  7.02%   313   10s
+  1519  1037 39996.7251   22   68 39981.7251 39997.0415  0.04%   136   15s
+  2082  1285 39987.7962   78   31 39981.7251 39997.0355  0.04%   125   20s
+  3367  1945 39996.8906   22   64 39981.7251 39997.0000  0.04%   101   26s
+  3427  1958     cutoff   21      39981.7251 39997.0000  0.04%   115   30s
+  3628  1999     cutoff   21      39981.7251 39997.0000  0.04%   129   35s
+  4112  2503 39995.9837   33   81 39981.7251 39996.9778  0.04%   134   42s
+  5225  2497 39994.3519   54   69 39981.7251 39996.9723  0.04%   116   46s
+  8261  2879 infeasible   59      39981.7251 39996.0206  0.04%  92.9   51s
+ 10614  3781 39985.9707   46   85 39981.7251 39995.9690  0.04%  84.0   55s
+H12927  4070                    39982.277064 39995.9441  0.03%  76.3   58s
+ 14039  4525 39995.4909   40   68 39982.2771 39995.9437  0.03%  73.8   60s
+
+Cutting planes:
+  MIR: 17
+  RLT: 3
+  Relax-and-lift: 1
+  BQP: 1
+
+Explored 14147 nodes (1052906 simplex iterations) in 60.02 seconds (157.81 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 3: 39982.3 39981.7 39207.3 
+
+Time limit reached
+Best objective 3.998227706436e+04, best bound 3.999594374539e+04, gap 0.0342%
