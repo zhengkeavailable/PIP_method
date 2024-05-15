@@ -172,7 +172,7 @@ for t in range(2 ** D):
 mode = "PIP"
 # mode="PIP"
 enlargement_rate = 1.2
-shrinkage_rate = 0.8
+shrinkage_rate = 0.9
 base_rate = 15
 pip_max_rate = 40
 if mode == "MIP":
