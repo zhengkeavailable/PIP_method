@@ -183,7 +183,7 @@ def build_decision_tree_model(model, x, Trt, Trt_is, y, propensity_model, treatm
     integer_var_count = sum(1 for var in all_vars if var.vType == gp.GRB.BINARY)
     # if estimator == 'DR' and iterations == 0:
     if mode == "MIP" and iterations == 0:
-        model.setParam("Timelimit", 3600)
+        model.setParam("Timelimit", 7200)
     else:
         model.setParam("Timelimit", 60)
     model.setParam('LogFile', 'output/solver_log' + str(iterations) + '.txt')
