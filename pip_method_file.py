@@ -73,63 +73,62 @@ for k in range(2 ** D - 1):
     b_start[k] = 0
 
 # 0. Initialization from policy tree
+if D==1:
+    if estimator == 'IPW':
+        a_start[0][11] = 1
+        b_start[0] = 22
+    elif estimator == 'DR':
+        a_start[0][2] = 1
+        b_start[0] = 56
+elif D==2:
+    if estimator == 'IPW':
+        a_start[0][7] = 1
+        a_start[1][11] = 1
+        a_start[2][2] = 1
+        b_start[0] = 98
+        b_start[1] = 20
+        b_start[2] = 60
+    elif estimator == 'DR':
+        a_start[0][6] = 1
+        a_start[1][1] = 1
+        a_start[2][9] = 1
+        b_start[0] = 82
+        b_start[1] = 158
+        b_start[2] = 4.1
+else:
+    if estimator=='IPW':
+        a_start[0][18]=1
+        a_start[1][2]=1
+        a_start[2][16]=1
+        a_start[3][18]=1
+        a_start[4][11]=1
+        a_start[5][9]=1
+        a_start[6][1]=1
 
-if estimator == 'IPW':
-    a_start[0][11] = 1
-    b_start[0] = 22
-elif estimator == 'DR':
-    a_start[0][2] = 1
-    b_start[0] = 56
-'''
-# depth = 2
-if estimator == 'IPW':
-    a_start[0][7] = 1
-    a_start[1][11] = 1
-    a_start[2][2] = 1
-    b_start[0] = 98
-    b_start[1] = 20
-    b_start[2] = 60
-elif estimator == 'DR':
-    a_start[0][6] = 1
-    a_start[1][1] = 1
-    a_start[2][9] = 1
-    b_start[0] = 82
-    b_start[1] = 158
-    b_start[2] = 4.1
+        b_start[0]=13
+        b_start[1]=62
+        b_start[2]=4.5
+        b_start[3]=8.0
+        b_start[4]=20.0
+        b_start[5]=4.0
+        b_start[6]=168
+    elif estimator=='DR':
+        a_start[0][2]=1
+        a_start[1][13]=1
+        a_start[2][0]=1
+        a_start[3][15]=1
+        a_start[4][9]=1
+        a_start[5][11]=1
+        a_start[6][4]=1
 
-if estimator=='IPW':
-    a_start[0][18]=1
-    a_start[1][2]=1
-    a_start[2][16]=1 
-    a_start[3][18]=1
-    a_start[4][11]=1
-    a_start[5][9]=1 
-    a_start[6][1]=1
-    
-    b_start[0]=13
-    b_start[1]=62
-    b_start[2]=4.5
-    b_start[3]=8.0
-    b_start[4]=20.0
-    b_start[5]=4.0
-    b_start[6]=168
-elif estimator=='DR':
-    a_start[0][2]=1
-    a_start[1][13]=1
-    a_start[2][0]=1 
-    a_start[3][15]=1
-    a_start[4][9]=1
-    a_start[5][11]=1 
-    a_start[6][4]=1
-    
-    b_start[0]=68
-    b_start[1]=96
-    b_start[2]=65
-    b_start[3]=31.7
-    b_start[4]=4.0
-    b_start[5]=20.0
-    b_start[6]=2.0
-'''
+        b_start[0]=68
+        b_start[1]=96
+        b_start[2]=65
+        b_start[3]=31.7
+        b_start[4]=4.0
+        b_start[5]=20.0
+        b_start[6]=2.0
+
 A_L = {}
 A_R = {}
 initial_value_positive = []
