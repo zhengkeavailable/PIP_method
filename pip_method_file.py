@@ -55,7 +55,7 @@ for s in range(N):
 
 # Calculate propensity score
 # estimator='IPW'
-estimator = 'IPW'
+estimator = 'DR'
 if estimator == 'IPW':
     propensity_model = cps.train_propensity_model(x, Trt)
     treatment_mean = None
@@ -169,7 +169,7 @@ for t in range(2 ** D):
                 initial_value_positive.append(constraint_value[t][s])
                 odd_index = 0
 
-mode = "PIP"
+mode = "MIP"
 # mode="PIP"
 enlargement_rate = 1.4
 shrinkage_rate = 0.7

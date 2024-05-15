@@ -1,2 +1,0 @@
-base_rate,enlargement_rate,shrinkage_rate,pip_max_rate: 10 1.4 0.7 40
-max time 60s each iteration

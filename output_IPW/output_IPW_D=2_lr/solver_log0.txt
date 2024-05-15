@@ -1,0 +1,79 @@
+
+Gurobi 11.0.1 (win64) logging started Wed May 15 12:28:07 2024
+
+Set parameter LogFile to value "output/solver_log0.txt"
+Gurobi Optimizer version 11.0.1 build v11.0.1rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 2827 rows, 822 columns and 53167 nonzeros
+Model fingerprint: 0x3135df19
+Variable types: 248 continuous, 574 integer (574 binary)
+Coefficient statistics:
+  Matrix range     [4e-01, 1e+05]
+  Objective range  [1e+00, 1e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e-02, 1e+05]
+
+User MIP start produced solution with objective 63231.3 (0.00s)
+Loaded user MIP start with objective 63231.3
+
+Presolve removed 246 rows and 246 columns
+Presolve time: 0.04s
+Presolved: 2581 rows, 576 columns, 51121 nonzeros
+Variable types: 235 continuous, 341 integer (337 binary)
+
+Root relaxation: objective 7.655522e+04, 974 iterations, 0.04 seconds (0.10 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 76555.2188    0   60 63231.2851 76555.2188  21.1%     -    0s
+     0     0 75471.2895    0   63 63231.2851 75471.2895  19.4%     -    0s
+     0     0 75471.2495    0   40 63231.2851 75471.2495  19.4%     -    0s
+     0     2 75471.2495    0   34 63231.2851 75471.2495  19.4%     -    0s
+H  254   132                    63808.506888 75468.7111  18.3%  35.8    1s
+H  323   147                    65165.044142 75468.7111  15.8%  29.2    1s
+H  465   178                    65233.222924 75468.7111  15.7%  22.9    1s
+H  692   242                    68914.592308 75468.7111  9.51%  16.9    2s
+  3998   680 69081.7863   84   56 68914.5923 75410.0137  9.43%   9.6    5s
+H 4952   769                    68975.177655 75410.0137  9.33%  14.9    9s
+H 4961   732                    69822.138349 75410.0137  8.00%  15.0    9s
+  5000   760 75410.0137   22   43 69822.1383 75410.0137  8.00%  15.3   10s
+H 6090   739                    70074.792805 75410.0137  7.61%  16.2   12s
+H 7985  1238                    71551.509819 75410.0137  5.39%  17.1   14s
+  8662  1620 75410.0137   47   92 71551.5098 75410.0137  5.39%  17.4   15s
+ 14428  3828 74631.1382   42   62 71551.5098 75410.0137  5.39%  21.4   20s
+ 19697  5477 infeasible   41      71551.5098 75410.0137  5.39%  23.3   27s
+H19702  4999                    72161.258476 75410.0137  4.50%  23.3   27s
+H21024  5374                    72261.258476 75410.0137  4.36%  23.7   33s
+ 21031  5379 73579.0139   47   26 72261.2585 75410.0137  4.36%  23.7   35s
+H21089  5152                    72418.656687 75410.0137  4.13%  24.0   35s
+H21464  5037                    72458.656687 75410.0137  4.07%  24.5   38s
+ 21704  5309 75410.0137   54   76 72458.6567 75410.0137  4.07%  24.9   40s
+H22684  4970                    72460.907949 75410.0137  4.07%  25.4   42s
+H23571  4828                    73184.055386 75410.0137  3.04%  25.8   44s
+ 23572  5031 75410.0137   47   81 73184.0554 75410.0137  3.04%  25.8   45s
+H25313  4938                    73244.883012 75410.0137  2.96%  26.4   46s
+ 26505  5512 infeasible   56      73244.8830 75410.0137  2.96%  26.8   50s
+H28315  5193                    73302.051474 75410.0137  2.88%  27.3   51s
+ 31822  5922 75410.0137   43   56 73302.0515 75410.0137  2.88%  27.8   55s
+H31872  5668                    73429.724888 75410.0137  2.70%  27.8   55s
+ 37949  8348 infeasible   54      73429.7249 75410.0137  2.70%  28.4   60s
+
+Cutting planes:
+  Cover: 1
+  Implied bound: 1
+  MIR: 1
+  Flow cover: 2
+  RLT: 2
+  Relax-and-lift: 2
+
+Explored 38241 nodes (1086578 simplex iterations) in 60.01 seconds (124.83 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 10: 73429.7 73302.1 73244.9 ... 71551.5
+
+Time limit reached
+Best objective 7.342972488824e+04, best bound 7.541001369251e+04, gap 2.6968%
