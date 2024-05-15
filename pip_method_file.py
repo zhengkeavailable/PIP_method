@@ -169,11 +169,11 @@ for t in range(2 ** D):
                 initial_value_positive.append(constraint_value[t][s])
                 odd_index = 0
 
-mode = "MIP"
+mode = "PIP"
 # mode="PIP"
-enlargement_rate = 1.4
-shrinkage_rate = 0.7
-base_rate = 10
+enlargement_rate = 1.2
+shrinkage_rate = 0.8
+base_rate = 15
 pip_max_rate = 40
 if mode == "MIP":
     base_rate = 100
