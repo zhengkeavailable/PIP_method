@@ -1,0 +1,47 @@
+
+Gurobi 11.0.1 (win64) logging started Thu May 16 19:31:18 2024
+
+Set parameter LogFile to value "output/solver_log37.txt"
+Gurobi Optimizer version 11.0.1 build v11.0.1rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 4951 rows, 1267 columns and 91417 nonzeros
+Model fingerprint: 0x6de62436
+Variable types: 568 continuous, 699 integer (699 binary)
+Coefficient statistics:
+  Matrix range     [4e-01, 1e+05]
+  Objective range  [1e+00, 1e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e-02, 1e+05]
+
+User MIP start produced solution with objective 97263.8 (0.01s)
+User MIP start produced solution with objective 97263.8 (0.01s)
+Loaded user MIP start with objective 97263.8
+
+Presolve removed 646 rows and 360 columns
+Presolve time: 0.12s
+Presolved: 4305 rows, 907 columns, 81538 nonzeros
+Variable types: 521 continuous, 386 integer (383 binary)
+
+Root relaxation: objective 9.755367e+04, 1100 iterations, 0.06 seconds (0.12 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 97553.6692    0    7 97263.8086 97553.6692  0.30%     -    0s
+     0     0 97398.1942    0   10 97263.8086 97398.1942  0.14%     -    0s
+     0     0 97397.8530    0    7 97263.8086 97397.8530  0.14%     -    0s
+     0     0 97393.7058    0    7 97263.8086 97393.7058  0.13%     -    0s
+     0     0 97393.7058    0    8 97263.8086 97393.7058  0.13%     -    1s
+     0     0 97393.7058    0    8 97263.8086 97393.7058  0.13%     -    1s
+     0     2 97393.7058    0    8 97263.8086 97393.7058  0.13%     -    1s
+
+Explored 29 nodes (3902 simplex iterations) in 1.51 seconds (1.98 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: 97263.8 97263.8 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 9.726380864056e+04, best bound 9.727275085417e+04, gap 0.0092%

@@ -1,0 +1,51 @@
+
+Gurobi 11.0.1 (win64) logging started Thu May 16 19:29:02 2024
+
+Set parameter LogFile to value "output/solver_log27.txt"
+Gurobi Optimizer version 11.0.1 build v11.0.1rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 4798 rows, 1206 columns and 87775 nonzeros
+Model fingerprint: 0x2e2d09df
+Variable types: 568 continuous, 638 integer (638 binary)
+Coefficient statistics:
+  Matrix range     [4e-01, 1e+05]
+  Objective range  [1e+00, 1e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e-02, 1e+05]
+
+User MIP start produced solution with objective 95639.5 (0.01s)
+User MIP start produced solution with objective 95639.5 (0.01s)
+Loaded user MIP start with objective 95639.5
+
+Presolve removed 585 rows and 357 columns
+Presolve time: 0.11s
+Presolved: 4213 rows, 849 columns, 79614 nonzeros
+Variable types: 523 continuous, 326 integer (324 binary)
+
+Root relaxation: objective 9.657351e+04, 1098 iterations, 0.06 seconds (0.12 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 96573.5093    0   18 95639.5487 96573.5093  0.98%     -    0s
+     0     0 96467.8689    0   17 95639.5487 96467.8689  0.87%     -    0s
+     0     0 96291.1834    0   12 95639.5487 96291.1834  0.68%     -    0s
+     0     0 96272.2176    0   11 95639.5487 96272.2176  0.66%     -    0s
+     0     0 96257.3623    0   11 95639.5487 96257.3623  0.65%     -    0s
+     0     2 96257.3623    0   11 95639.5487 96257.3623  0.65%     -    1s
+H   30    25                    95699.115888 96220.7413  0.55%  64.9    1s
+
+Cutting planes:
+  Gomory: 1
+  MIR: 3
+
+Explored 797 nodes (24329 simplex iterations) in 2.86 seconds (5.13 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 3: 95699.1 95699.1 95639.5 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 9.569911588839e+04, best bound 9.569911588839e+04, gap 0.0000%
