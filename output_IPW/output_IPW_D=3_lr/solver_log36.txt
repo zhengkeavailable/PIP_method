@@ -1,0 +1,49 @@
+
+Gurobi 11.0.1 (win64) logging started Thu May 16 19:31:05 2024
+
+Set parameter LogFile to value "output/solver_log36.txt"
+Gurobi Optimizer version 11.0.1 build v11.0.1rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 5148 rows, 1340 columns and 95488 nonzeros
+Model fingerprint: 0x627bcdb8
+Variable types: 568 continuous, 772 integer (772 binary)
+Coefficient statistics:
+  Matrix range     [4e-01, 1e+05]
+  Objective range  [1e+00, 1e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e-02, 1e+05]
+
+User MIP start produced solution with objective 96915.5 (0.01s)
+User MIP start produced solution with objective 96915.5 (0.01s)
+Loaded user MIP start with objective 96915.5
+
+Presolve removed 687 rows and 371 columns
+Presolve time: 0.12s
+Presolved: 4461 rows, 969 columns, 84900 nonzeros
+Variable types: 525 continuous, 444 integer (440 binary)
+
+Root relaxation: objective 9.756507e+04, 1151 iterations, 0.06 seconds (0.11 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 97565.0664    0    8 96915.5280 97565.0664  0.67%     -    0s
+     0     0 97398.1880    0   11 96915.5280 97398.1880  0.50%     -    0s
+     0     0 97393.6658    0    5 96915.5280 97393.6658  0.49%     -    0s
+     0     2 97393.6658    0    5 96915.5280 97393.6658  0.49%     -    0s
+H 3789   212                    97263.808641 97283.2230  0.02%   7.5    3s
+
+Cutting planes:
+  MIR: 3
+  Inf proof: 1
+
+Explored 4411 nodes (33173 simplex iterations) in 4.18 seconds (9.04 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 3: 97263.8 97263.8 96915.5 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 9.726380864056e+04, best bound 9.727038145946e+04, gap 0.0068%

@@ -1,0 +1,62 @@
+
+Gurobi 11.0.1 (win64) logging started Thu May 16 19:36:01 2024
+
+Set parameter LogFile to value "output/solver_log47.txt"
+Gurobi Optimizer version 11.0.1 build v11.0.1rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 5969 rows, 1577 columns and 112564 nonzeros
+Model fingerprint: 0x700a5d29
+Variable types: 568 continuous, 1009 integer (1009 binary)
+Coefficient statistics:
+  Matrix range     [4e-01, 1e+05]
+  Objective range  [1e+00, 1e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e-02, 1e+05]
+
+User MIP start produced solution with objective 97647.2 (0.01s)
+User MIP start produced solution with objective 97647.2 (0.01s)
+Loaded user MIP start with objective 97647.2
+
+Presolve removed 995 rows and 548 columns
+Presolve time: 0.15s
+Presolved: 4974 rows, 1029 columns, 95345 nonzeros
+Variable types: 522 continuous, 507 integer (504 binary)
+
+Root relaxation: objective 9.968557e+04, 1415 iterations, 0.09 seconds (0.16 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 99685.5675    0   35 97647.1652 99685.5675  2.09%     -    0s
+     0     0 98966.0760    0   52 97647.1652 98966.0760  1.35%     -    0s
+     0     0 98717.7502    0   32 97647.1652 98717.7502  1.10%     -    0s
+     0     0 98717.7411    0   33 97647.1652 98717.7411  1.10%     -    0s
+     0     0 98717.7411    0   32 97647.1652 98717.7411  1.10%     -    1s
+     0     2 98717.7366    0   32 97647.1652 98717.7366  1.10%     -    1s
+   533   161 97827.3151    8   37 97647.1652 98441.9618  0.81%  57.9    5s
+  2258   550 97789.2296   10   47 97647.1652 98112.2487  0.48%  54.3   10s
+  2509   581 98069.1303   11   32 97647.1652 98103.1348  0.47%  54.1   15s
+  2732   663 98103.1348   39   50 97647.1652 98103.1348  0.47%  60.0   20s
+  3289   705 97689.8858   33   34 97647.1652 98103.1348  0.47%  60.3   25s
+  4325   530 infeasible   26      97647.1652 98103.1348  0.47%  59.0   30s
+  5704   755     cutoff   30      97647.1652 98103.1348  0.47%  55.8   35s
+  7644  1173 infeasible   39      97647.1652 98067.0378  0.43%  52.1   41s
+  9037  1322 97970.2904   29   43 97647.1652 98039.4074  0.40%  49.6   45s
+ 10309  1606     cutoff   31      97647.1652 98004.9800  0.37%  48.3   50s
+ 11766  1823 infeasible   28      97647.1652 97990.9702  0.35%  47.1   56s
+ 12712  1975 97680.7954   31   40 97647.1652 97982.7698  0.34%  46.4   60s
+
+Cutting planes:
+  MIR: 2
+  Flow cover: 3
+
+Explored 13023 nodes (606741 simplex iterations) in 60.03 seconds (131.92 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: 97647.2 97647.2 
+
+Time limit reached
+Best objective 9.764716517013e+04, best bound 9.798024859579e+04, gap 0.3411%

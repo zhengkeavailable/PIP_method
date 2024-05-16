@@ -1,0 +1,42 @@
+
+Gurobi 11.0.1 (win64) logging started Thu May 16 19:21:12 2024
+
+Set parameter LogFile to value "output/solver_log16.txt"
+Gurobi Optimizer version 11.0.1 build v11.0.1rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 4808 rows, 1211 columns and 88237 nonzeros
+Model fingerprint: 0xb3ca1ba2
+Variable types: 568 continuous, 643 integer (643 binary)
+Coefficient statistics:
+  Matrix range     [4e-01, 1e+05]
+  Objective range  [1e+00, 1e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e-02, 1e+05]
+
+User MIP start produced solution with objective 93621.4 (0.01s)
+User MIP start produced solution with objective 93621.4 (0.01s)
+Loaded user MIP start with objective 93621.4
+
+Presolve removed 632 rows and 343 columns
+Presolve time: 0.14s
+Presolved: 4176 rows, 868 columns, 78742 nonzeros
+Variable types: 528 continuous, 340 integer (338 binary)
+
+Root relaxation: objective 9.387267e+04, 1050 iterations, 0.07 seconds (0.11 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 93872.6652    0    2 93621.4190 93872.6652  0.27%     -    0s
+     0     0     cutoff    0      93621.4190 93621.4190  0.00%     -    0s
+
+Explored 1 nodes (1561 simplex iterations) in 0.47 seconds (0.63 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: 93621.4 93621.4 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 9.362141896596e+04, best bound 9.362141896596e+04, gap 0.0000%
