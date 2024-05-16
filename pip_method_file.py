@@ -55,7 +55,7 @@ for s in range(N):
 
 # Calculate propensity score
 # estimator='IPW'
-estimator = 'DR'
+estimator = 'IPW'
 if estimator == 'IPW':
     propensity_model = cps.train_propensity_model(x, Trt)
     treatment_mean = None
@@ -172,8 +172,8 @@ for t in range(2 ** D):
 mode = "PIP"
 # mode="PIP"
 enlargement_rate = 1.2
-shrinkage_rate = 0.8
-base_rate = 10
+shrinkage_rate = 0.9
+base_rate = 15
 pip_max_rate = 40
 if mode == "MIP":
     base_rate = 100
@@ -223,8 +223,9 @@ if mode == "PIP":
     e2_list = [en_e2]
     e1_b_list = [en_e1_lb]
     e2_b_list = [en_e2_lb]
-
-    while iterations_unchange < 10 and iterations < 50 and min(epsilon_1, epsilon_2) > 1e-6 and max_rate_reach <= 1:
+    epsilon_enlarge = 0
+    #while iterations_unchange < 10 and iterations < 50 and min(epsilon_1, epsilon_2) > 1e-6 and max_rate_reach <= 1:
+    while iterations_unchange < 10 and iterations < 50 and max_rate_reach <= 1:
         iterations += 1
         # 1. Determine index sets # In function
         # 2. Solve the MIP
@@ -253,6 +254,21 @@ if mode == "PIP":
             e2_b_list.append(en_e2_lb)
 
         # 4. Shrinkage
+        elif epsilon_1 < 1e-6 and epsilon_enlarge < 2:
+            iterations_unchange = 0
+            with open('output/output_iter=' + str(iterations) + '.txt', 'a') as f:
+                print("Shrinkage!", file=f)
+            base_rate = 15
+            epsilon_1 = np.percentile(value_positive, base_rate)
+            epsilon_2 = -np.percentile(value_negative, 100 - base_rate)
+            shrinkage.append(1)
+            e1_list.append(sh_e1)
+            e2_list.append(sh_e2)
+            e1_b_list.append(sh_e1_ub)
+            e2_b_list.append(sh_e2_ub)
+            epsilon_enlarge += 1
+        elif epsilon_1 < 1e-6 and epsilon_enlarge >= 2:
+            break
         else:
             iterations_unchange = 0
             with open('output/output_iter=' + str(iterations) + '.txt', 'a') as f:
