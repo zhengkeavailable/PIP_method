@@ -1,0 +1,1 @@
+Total time of pip method after iteration 0 14412.615485191345 s
