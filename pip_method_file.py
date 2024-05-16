@@ -19,7 +19,7 @@ df_CTS = pd.read_csv("inspire_CTS_0_120_icuhalfday.csv")
 # N = 429  # Sample size
 N = 858  # Sample size
 p = 37  # Dimension of features
-D = 2  # Depth
+D = 3  # Depth
 B_lb = -1e3  # Lower bound of \Phi_st
 B_ub = 1e5  # Upper bound of \Phi_st
 M_ub = 1e5  # Upper bound: big M
@@ -103,29 +103,29 @@ else:
         a_start[3][18] = 1
         a_start[4][11] = 1
         a_start[5][9] = 1
-        a_start[6][1] = 1
+        a_start[6][11] = 1
 
         b_start[0] = 13
         b_start[1] = 62
         b_start[2] = 4.5
-        b_start[3] = 8.0
+        b_start[3] = 9.0
         b_start[4] = 20.0
         b_start[5] = 4.0
-        b_start[6] = 168
+        b_start[6] = 18
     elif estimator == 'DR':
         a_start[0][2] = 1
-        a_start[1][13] = 1
+        a_start[1][9] = 1
         a_start[2][0] = 1
-        a_start[3][15] = 1
-        a_start[4][9] = 1
+        a_start[3][6] = 1
+        a_start[4][16] = 1
         a_start[5][11] = 1
         a_start[6][4] = 1
 
-        b_start[0] = 68
-        b_start[1] = 96
+        b_start[0] = 66
+        b_start[1] = 4
         b_start[2] = 65
-        b_start[3] = 31.7
-        b_start[4] = 4.0
+        b_start[3] = 78
+        b_start[4] = 4.2
         b_start[5] = 20.0
         b_start[6] = 2.0
 
@@ -169,7 +169,7 @@ for t in range(2 ** D):
                 initial_value_positive.append(constraint_value[t][s])
                 odd_index = 0
 
-mode = "PIP"
+mode = "MIP"
 # mode="PIP"
 enlargement_rate = 1.2
 shrinkage_rate = 0.9
